@@ -1,0 +1,34 @@
+language: node_js
+node_js:
+  - "8"
+
+cache:
+  yarn: true
+  directories:
+    - "node_modules"
+
+branches:
+  only:
+  - master
+
+install:
+  - yarn install
+  - yarn generate
+
+script:
+  # script默认是npm test，如果有yarn.lock文件则会用yarn test
+  # 参考：https://docs.travis-ci.com/user/languages/javascript-with-nodejs/
+  - echo "Skipping tests"
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  # Repo slug, defaults to current repo
+  repo: https://github.com/pkjy/pkjy.github.io.git
+  # https://docs.travis-ci.com/user/deployment/pages/
+  # Set in travis-ci.org dashboard, marked secure https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
+  github-token: $GITHUB_ACCESS_TOKEN 
+  target-branch: master
+  local-dir: dist
+  on:
+    branch: master
