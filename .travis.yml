@@ -12,6 +12,7 @@ branches:
   - master
 
 install:
+  - cd ./client
   - yarn install
   - yarn generate
 
@@ -29,6 +30,6 @@ deploy:
   # Set in travis-ci.org dashboard, marked secure https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
   github-token: $GITHUB_ACCESS_TOKEN 
   target-branch: master
-  local-dir: dist
+  local-dir: client/dist
   on:
     branch: master
