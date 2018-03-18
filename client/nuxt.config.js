@@ -3,14 +3,50 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: "first-nuxt",
+    title: "彭君怡 - 个人主页 - resume",
     meta: [
       { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "Nuxt.js project" }
+      {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1,user-scalable=no"
+      },
+      {
+        name: "description",
+        content:
+          "彭君怡-pkjy-pjy-个人主页，彭君怡的简历，pkjy的简历，pkjy的生活成长，彭君怡的生活成长"
+      },
+      {
+        name: "keywords",
+        content:
+          "彭君怡的个人主页, pkjy个人主页, web前端,JavaScript,css,html,简历,resume"
+      },
+      { name: "author", content: "彭君怡,pkjy,pengjunyi,pjy" },
+      {
+        name: "description",
+        content:
+          "彭君怡-pkjy-pjy-个人主页，彭君怡的简历，pkjy的简历，pkjy的生活成长，彭君怡的生活成长"
+      }
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }]
+    link: [
+      {
+        rel: "icon",
+        type: "image/x-icon",
+        href: "http://7xttt4.com1.z0.glb.clouddn.com/images/pjy_50x50.png"
+      },
+      { rel: "stylesheet", href: "/css/style.css" },
+      {
+        rel: "stylesheet",
+        href:
+          "//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      }
+    ]
   },
+  plugins: [
+    /*
+    ** 谷歌分析插件
+    */
+    { src: "~plugins/ga.js", ssr: false }
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -19,6 +55,14 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    /*
+    ** 添加 postcss 插件
+    */
+    postcss: [
+      require("postcss-nested")(),
+      require("postcss-responsive-type")(),
+      require("postcss-hexrgba")()
+    ],
     /*
     ** Run ESLint on save
     */

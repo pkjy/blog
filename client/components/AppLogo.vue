@@ -1,79 +1,32 @@
 <template>
-  <div class="VueToNuxtLogo">
-    <div class="Triangle Triangle--two"/>
-    <div class="Triangle Triangle--one"/>
-    <div class="Triangle Triangle--three"/>
-    <div class="Triangle Triangle--four"/>
-  </div>
+     <section class="page-header" id="page-header">
+        <h1 class="project-name">PkJY</h1>
+        <h2 class="project-tagline">
+          <span style="display:block">resume</span>
+            <span  style="display:block">（心镜科技）</span>
+            <span style="display:block">[长沙]</span></h2>
+        <ul class="social_icons">
+            <li>
+                <a href="http://blog.csdn.net/a214161398a" title="CSDN Blog">
+                    <i class="fa fa-rss fa-3x"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/pkjy" title="github">
+                    <i class="fa fa-github fa-3x f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="http://weibo.com/u/3959538653" title="Sina Weibo">
+                    <i class="fa fa-weibo fa-3x"></i>
+                </a>
+            </li>
+        </ul>
+        <i class="fa fa-cog fa-spin fa-2x"></i>
+        <img src="http://7xttt4.com1.z0.glb.clouddn.com/images/pjy_100x100.jpg" class="img-circle" alt="myPhoto">
+    </section>
 </template>
 
 <style>
-.VueToNuxtLogo {
-  display: inline-block;
-  animation: turn 2s linear forwards 1s;
-  transform: rotateX(180deg);
-  position: relative;
-  overflow: hidden;
-  height: 180px;
-  width: 245px;
-}
 
-.Triangle {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 0;
-}
-
-.Triangle--one {
-  border-left: 105px solid transparent;
-  border-right: 105px solid transparent;
-  border-bottom: 180px solid #41B883;
-}
-
-.Triangle--two {
-  top: 30px;
-  left: 35px;
-  animation: goright 0.5s linear forwards 3.5s;
-  border-left: 87.5px solid transparent;
-  border-right: 87.5px solid transparent;
-  border-bottom: 150px solid #3B8070;
-}
-
-.Triangle--three {
-  top: 60px;
-  left: 35px;
-  animation: goright 0.5s linear forwards 3.5s;
-  border-left: 70px solid transparent;
-  border-right: 70px solid transparent;
-  border-bottom: 120px solid #35495E;
-}
-
-.Triangle--four {
-  top: 120px;
-  left: 70px;
-  animation: godown 0.5s linear forwards 3s;
-  border-left: 35px solid transparent;
-  border-right: 35px solid transparent;
-  border-bottom: 60px solid #fff;
-}
-
-@keyframes turn {
-  100% {
-    transform: rotateX(0deg);
-  }
-}
-
-@keyframes godown {
-  100% {
-    top: 180px;
-  }
-}
-
-@keyframes goright {
-  100% {
-    left: 70px;
-  }
-}
 </style>

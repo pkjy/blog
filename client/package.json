@@ -19,7 +19,10 @@
     "precommit": "npm run lint"
   },
   "dependencies": {
-    "nuxt": "^1.0.0"
+    "nuxt": "^1.0.0",
+    "postcss-hexrgba": "^1.0.0",
+    "postcss-nested": "^3.0.0",
+    "postcss-responsive-type": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.1",

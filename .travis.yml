@@ -22,14 +22,17 @@ script:
   - echo "Skipping tests"
 
 deploy:
+  # github pages部署的相关参数页面
+  # https://docs.travis-ci.com/user/deployment/pages/
   provider: pages
   skip-cleanup: true
-  # Repo slug, defaults to current repo
+  # 默认是当前repo仓库，如果需要提交到别的仓库则需要设置repo的值
   repo: pkjy/pkjy.github.io
-  # https://docs.travis-ci.com/user/deployment/pages/
   # Set in travis-ci.org dashboard, marked secure https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
   github-token: $GITHUB_ACCESS_TOKEN 
   target-branch: master
+  # 是否保存提交记录
+  keep-history: true
   local-dir: client/dist
   on:
     branch: master
