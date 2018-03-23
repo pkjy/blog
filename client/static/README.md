@@ -1,5 +1,7 @@
 # STATIC
 
+[![Build Status](https://travis-ci.org/pkjy/blog.svg?branch=master)](https://travis-ci.org/pkjy/blog)
+
 This directory contains your static files.
 Each file inside this directory is mapped to /.
 
