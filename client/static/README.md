@@ -1,13 +1,22 @@
-# STATIC
+# 个人博客
+
+> 前台展示页面 [主页](https://pkjy.github.io)
 
 [![Build Status](https://travis-ci.org/pkjy/blog.svg?branch=master)](https://travis-ci.org/pkjy/blog)
 
-This directory contains your static files.
-Each file inside this directory is mapped to /.
+### 相关技术栈
 
-Example: /static/robots.txt is mapped as /robots.txt.
+* 基于 Vue2.X
+* 客户端前台项目使用 Nuxt 服务端渲染
+* 服务端接口使用 Node+MySql+Express
+* 接入 travis-ci 自动化测试工具
 
-More information about the usage of this directory in the documentation:
-https://nuxtjs.org/guide/assets#static
+### TODO：
 
-**This directory is not required, you can delete it if you don't want to use it.**
+* 完成客户端后台管理页面基础 API（注册、登录、增删改查文章）
+* 完成客户端前台展示页面基础 API（获取文章）
+* 前台页面调整，支持展示文章
+
+### 源码
+
+博客相关客户端、服务端的源码请前往[blog](https://github.com/pkjy/blog)仓库

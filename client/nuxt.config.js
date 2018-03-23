@@ -33,7 +33,7 @@ module.exports = {
         type: "image/x-icon",
         href: "http://7xttt4.com1.z0.glb.clouddn.com/images/pjy_50x50.png"
       },
-      { rel: "stylesheet", href: "/css/style.css" },
+      // { rel: "stylesheet", href: "/css/style.css" },
       {
         rel: "stylesheet",
         href:
@@ -76,5 +76,9 @@ module.exports = {
         })
       }
     }
-  }
+  },
+  /**
+   * 全局CSS
+   */
+  css: ["~/assets/style.css"]
 }
