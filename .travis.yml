@@ -32,7 +32,7 @@ deploy:
   github-token: $GITHUB_ACCESS_TOKEN 
   target-branch: master
   # 是否保存提交记录
-  keep-history: true
+  # keep-history: true
   local-dir: client/dist
   on:
     branch: master
