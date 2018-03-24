@@ -7,7 +7,7 @@
 ### 相关技术栈
 
 * 基于 Vue2.X
-* 客户端前台项目使用 Nuxt 服务端渲染
+* 客户端前台项目使用 Nuxt 静态化打包
 * 服务端接口使用 Node+MySql+Express
 * 接入 travis-ci 自动化测试工具
 
