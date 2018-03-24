@@ -5,7 +5,7 @@
 ### client 文件夹
 
 client 文件夹放项目前台展示相关页面  
-使用 Nuxt 做 SSR 渲染
+使用 Nuxt 生成静态化文件
 
 ### server 文件夹
 
