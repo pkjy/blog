@@ -1,46 +1,47 @@
 <template>
   <div>
     <section class="page-header" id="page-header">
-			<div class="m-f_2">
-				<div class="menu ori-pos" @click="isClick = !isClick">
-					<div :class="['menu-line','menu-line-1',{'menu-line-1-click':isClick}]"></div>
-					<div :class="['menu-line','menu-line-2',{'menu-line-2-click':isClick}]"></div>
-					<div :class="['menu-line','menu-line-3',{'menu-line-3-click':isClick}]"></div>
-				</div>
+      <div class="m-f_2">
+        <div class="menu ori-pos" @click="isClick = !isClick">
+          <div :class="['menu-line','menu-line-1',{'menu-line-1-click':isClick}]"></div>
+          <div :class="['menu-line','menu-line-2',{'menu-line-2-click':isClick}]"></div>
+          <div :class="['menu-line','menu-line-3',{'menu-line-3-click':isClick}]"></div>
+        </div>
         <h1 class="inline-block  m-t_0 m-b_0 m-f_2 ">PKJY</h1>
-			</div>
+      </div>
       <div style="display: flex;">
         <i class="pkjy-csdn pointer" @click="goWeb('csdn')" style="font-size: 24px;width: 50px;text-align: center;line-height:45px;background-color: rgb(217, 140, 140);"></i>
         <i class="pkjy-sina pointer" @click="goWeb('sina')" style="font-size: 24px;width: 50px;text-align: center;line-height:45px;background-color: rgb(217, 140, 190);"></i>
         <i class="pkjy-github pointer" @click="goWeb('github')" style="font-size: 24px;width: 50px;text-align: center;line-height:45px;background-color:#a88cd9; "></i>
       </div>
-       
     </section>
-    <nuxt style="padding-top:45px;"/>
-		<section :class="['aside-content',{'aside-left':isClick}]">
-				<div class="vertical-centered-box">
-					<div class="content">
-						<div class="loader-circle"></div>
-						<div class="loader-line-mask">
-							<div class="loader-line"></div>
-						</div>
-					</div>
-				</div>
 
-        <img src="http://7xttt4.com1.z0.glb.clouddn.com/images/pjy_100x100.jpg" class="img-circle" alt="myPhoto">
-			  
-        <h4 class="project-tagline">
-          <span style="display:block">[长沙]</span>
-          <span  style="display:block">（心镜科技）</span>
-        </h4>
-		</section>
+    <nuxt style="padding-top:45px;" />
+
+    <section :class="['aside-content',{'aside-left':isClick}]">
+      <div class="vertical-centered-box">
+        <div class="content">
+          <div class="loader-circle"></div>
+          <div class="loader-line-mask">
+            <div class="loader-line"></div>
+          </div>
+        </div>
+      </div>
+
+      <img src="http://7xttt4.com1.z0.glb.clouddn.com/images/pjy_100x100.jpg" class="img-circle" alt="myPhoto">
+
+      <h4 class="project-tagline">
+        <span style="display:block">[长沙]</span>
+        <span style="display:block">（心镜科技）</span>
+      </h4>
+    </section>
   </div>
 </template>
 
 
 <script>
 export default {
-  name: "CommonHeader",
+  name: "Default",
   components: {},
   data() {
     return {
