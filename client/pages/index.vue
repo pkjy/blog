@@ -1,6 +1,5 @@
 <template>
     <section>
-        <app-logo/>
         <section class="main-content" id="main-content">
             <h3>Self-introduction</h3>
             <p>
@@ -143,86 +142,83 @@
 </template>
 
 <script>
-import AppLogo from "~/components/AppLogo.vue"
 export default {
-  components: {
-    AppLogo
-  },
+  components: {},
   methods: {
     throttle(method, context) {
       //用函数节流优化rezise——《高程》
-      clearTimeout(method.tId)
+      clearTimeout(method.tId);
       method.tId = setTimeout(function() {
-        method.call(context)
-      }, 100)
+        method.call(context);
+      }, 100);
     },
     renderCanvas() {
-      var test = document.getElementById("myCanvas")
+      var test = document.getElementById("myCanvas");
       if (test) {
-        document.body.removeChild(test)
+        document.body.removeChild(test);
       }
 
       var box = document.getElementById("main-content"),
-        canvas = document.createElement("canvas")
-      canvas.height = box.offsetHeight
-      canvas.width = document.body.offsetWidth //Chrome里有18像素的滚动条？改成body的offsetWidth完美解决
-      canvas.id = "myCanvas"
+        canvas = document.createElement("canvas");
+      canvas.height = box.offsetHeight;
+      canvas.width = document.body.offsetWidth; //Chrome里有18像素的滚动条？改成body的offsetWidth完美解决
+      canvas.id = "myCanvas";
 
-      var headerHeight = document.getElementById("page-header").offsetHeight
-      canvas.style.marginTop = headerHeight + "px"
+      var headerHeight = document.getElementById("page-header").offsetHeight;
+      canvas.style.marginTop = headerHeight + "px";
 
-      var ctx = canvas.getContext("2d")
-      document.body.appendChild(canvas)
-      setInterval(loop, 36)
+      var ctx = canvas.getContext("2d");
+      document.body.appendChild(canvas);
+      setInterval(loop, 36);
 
       function Circle(x, y, r, color) {
-        this.x = x
-        this.y = y
-        this.r = r
-        this.color = color
-        this.grow = 3
-        this.tremble = Math.random() - 0.5
-        this.range = (Math.random() - 0.5) * 5
+        this.x = x;
+        this.y = y;
+        this.r = r;
+        this.color = color;
+        this.grow = 3;
+        this.tremble = Math.random() - 0.5;
+        this.range = (Math.random() - 0.5) * 5;
         this.drawCircle = function() {
-          ctx.beginPath()
-          ctx.fillStyle = this.color
-          ctx.arc(this.x, this.y, r, 0, Math.PI * 2)
-          ctx.fill()
-          ctx.closePath()
-        }
+          ctx.beginPath();
+          ctx.fillStyle = this.color;
+          ctx.arc(this.x, this.y, r, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.closePath();
+        };
         this.pos = function() {
-          var value = this.grow * this.tremble
-          this.x = this.x + this.range
-          this.y += value
-        }
+          var value = this.grow * this.tremble;
+          this.x = this.x + this.range;
+          this.y += value;
+        };
       }
 
-      var arr = []
+      var arr = [];
       function loop() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
-        var col = "rgba(33,184,126,0.3)"
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        var col = "rgba(219,137,29,0.3)";
 
         var circle = new Circle(
           Math.random() * canvas.width,
           Math.random() * canvas.height,
           Math.random() * 5,
           col
-        )
-        arr.push(circle)
+        );
+        arr.push(circle);
         for (var i in arr) {
-          arr[i].drawCircle()
-          arr[i].pos()
+          arr[i].drawCircle();
+          arr[i].pos();
         }
         if (arr.length > 500) {
-          arr.shift()
+          arr.shift();
         }
       }
     }
   },
   mounted() {
-    this.throttle(this.renderCanvas)
+    this.throttle(this.renderCanvas);
   }
-}
+};
 </script>
 
 <style>
