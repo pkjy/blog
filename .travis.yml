@@ -25,7 +25,8 @@ deploy:
   # github pages部署的相关参数页面
   # https://docs.travis-ci.com/user/deployment/pages/
   provider: pages
-  skip-cleanup: true
+  # 不自动清空
+  skip-cleanup: false
   # 默认是当前repo仓库，如果需要提交到别的仓库则需要设置repo的值
   repo: pkjy/pkjy.github.io
   # Set in travis-ci.org dashboard, marked secure https://docs.travis-ci.com/user/deployment/pages/#Setting-the-GitHub-token
