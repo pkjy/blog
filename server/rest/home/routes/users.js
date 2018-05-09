@@ -6,10 +6,10 @@ var URL = require("url")
 var good = require("../controllers/users.js")
 /* GET users listing. */
 router
-  // .get("/", function(req, res, next) {
-  //   res.send("respond with a resource")
-  // })
-  .get("/info", function(req, res, next) {
+  .get("/", function (req, res, next) {
+    res.send("respond with a resource")
+  })
+  .get("/info", function (req, res, next) {
     var user = new User()
     var params = URL.parse(req.url, true).query
 
@@ -23,14 +23,17 @@ router
       user.city = "杭州市"
     }
 
-    var response = { status: 1, data: user }
+    var response = {
+      status: 1,
+      data: user
+    }
     res.send(JSON.stringify(response))
   })
-  .get("/goods", function(req, res, next) {
+  .get("/goods", function (req, res, next) {
     console.log("123", req, res, next)
     good.goodAll(req, res, next)
   })
-  .get("/goodAdd", function(req, res, next) {
+  .get("/goodAdd", function (req, res, next) {
     good.goodadd(req, res, next)
   })
 
