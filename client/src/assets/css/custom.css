@@ -1,0 +1,15 @@
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}

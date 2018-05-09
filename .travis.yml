@@ -13,8 +13,8 @@ branches:
 
 install:
   - cd ./client
-  - yarn install
-  - yarn generate
+  - yarn
+  - yarn build
 
 script:
   # script默认是npm test，如果有yarn.lock文件则会用yarn test

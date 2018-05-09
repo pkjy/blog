@@ -1,0 +1,54 @@
+.header {
+  min-height: 60px;
+}
+
+.header .logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.header .logo-link img {
+  height: 30px;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.header .nav-list {
+  display: inline-block;
+}
+
+.header .nav-list::before {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+.header .nav-list-item {
+  display: inline-block;
+  padding: 19px 10px;
+}
+
+.header .nav-list-item a {
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+.container .header {
+  position: absolute;
+}
+
+.header .nav-list-link {
+  color: #fff;
+}
