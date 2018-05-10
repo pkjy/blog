@@ -10,7 +10,7 @@
 
 <script>
 import imgLoadAni from '@/utils/img-load-animation'
-
+import { md2html } from '@/utils/markdown-and-html'
 export default {
   name: 'MainPost',
   computed: {
@@ -23,7 +23,7 @@ export default {
         : new Date()
     },
     postContent() {
-      return this.$store.state.currentPost.content
+      return md2html(this.$store.state.currentPost.content || '')
     }
   },
   // beforeRouteEnter(to, from, next) {

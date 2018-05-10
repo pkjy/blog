@@ -3,7 +3,7 @@
   "title": "[测试] Hello World second",
   "date": "2018-05-10T03:33:34.000Z",
   "updated": "2018-05-10T08:45:41.927Z",
-  "content": "<div>hello world second</div>",
+  "content": "### h啊哈哈哈哈\n``` javascript\n\tfunciton(){\n\tconsole.log('balala')\n\t}\n```\n",
   "prev": "2018/05/09/hello-wolrd/",
   "next": ""
 }

@@ -8,7 +8,7 @@
           </router-link>
         </h2>
         <div class="post-info">{{ post.date |formdate}}</div>
-        <div class="post-content" v-html="post.excerpt"></div>
+        <div class="post-content" v-html="md2html(post.excerpt)"></div>
         <router-link :to="post.path">
           <span class="read-more">READ MORE</span>
         </router-link>
@@ -19,12 +19,12 @@
 
 <script>
 import imgLoadAni from '@/utils/img-load-animation'
+import { md2html } from '@/utils/markdown-and-html'
 
 export default {
   name: 'MainBlog',
   data() {
-    return {
-    }
+    return {}
   },
   computed: {
     siteConfig() {
@@ -41,6 +41,9 @@ export default {
     next(vm => {
       vm.$store.commit('setView', 'index')
     })
+  },
+  methods: {
+    md2html
   },
   updated: imgLoadAni
 }

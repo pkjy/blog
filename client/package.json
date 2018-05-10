@@ -15,7 +15,8 @@
     "normalize.css": "^8.0.0",
     "vue-meta": "^1.4.3",
     "date-fns": "^1.29.0",
-    "spinkit": "^1.2.5"
+    "spinkit": "^1.2.5",
+    "marked": "^0.3.18"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.0.0-beta.9",
