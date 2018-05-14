@@ -7,9 +7,10 @@ function createFile() {
   const writerStream = fs.createWriteStream(`${docFullDir}/${dateStamp}.md`);
 
   // 使用 utf8 编码写入数据
-  writerStream.write(`"title": "Hello World",
+  writerStream.write(`{
+"title": "Hello World",
 "date": "2013/7/13 20:46:25"
-;;;`, 'UTF8');
+};;;`, 'UTF8');
 
   // 标记文件末尾
   writerStream.end();
