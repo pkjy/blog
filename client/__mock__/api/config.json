@@ -84,7 +84,8 @@
     "menu": {
       "Home": "/",
       "Blog": "/blog/",
-      "Archive": "/archives/"
+      "Archive": "/archives/",
+      "Gallery": "/gallery/"
     },
     "favicon": "/favicon.png",
     "logo": "source/logo.png",

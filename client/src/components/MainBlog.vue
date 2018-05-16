@@ -7,7 +7,7 @@
             {{ post.title }}
           </router-link>
         </h2>
-        <div class="post-info">{{ post.date |formdate}}</div>
+        <div class="post-info">{{ post.date |fns}}</div>
         <div class="post-content" v-html="md2html(post.excerpt)"></div>
         <router-link :to="post.path">
           <span class="read-more">READ MORE</span>
@@ -18,35 +18,35 @@
 </template>
 
 <script>
-import imgLoadAni from '@/utils/img-load-animation'
-import { md2html } from '@/utils/markdown-and-html'
+import imgLoadAni from "@/utils/img-load-animation";
+import { md2html } from "@/utils/markdown-and-html";
 
 export default {
-  name: 'MainBlog',
+  name: "MainBlog",
   data() {
-    return {}
+    return {};
   },
   computed: {
     siteConfig() {
-      return this.$store.state.siteConfig
+      return this.$store.state.siteConfig;
     },
     themeConfig() {
-      return this.$store.state.themeConfig
+      return this.$store.state.themeConfig;
     },
     postlist() {
-      return this.$store.state.postlist
+      return this.$store.state.postlist;
     }
   },
   beforeRouteEnter(to, from, next) {
     next(vm => {
-      vm.$store.commit('setView', 'index')
-    })
+      vm.$store.commit("setView", "index");
+    });
   },
   methods: {
     md2html
   },
   updated: imgLoadAni
-}
+};
 </script>
 
 <style>
@@ -62,7 +62,7 @@ export default {
 .post-list .post-content h4:before,
 .post-list .post-content h5:before,
 .post-list .post-content h6:before {
-  content: '';
+  content: "";
 }
 .post-list .post-content > ul {
   list-style: initial;

@@ -23,21 +23,21 @@
 </template>
 
 <script>
-import 'normalize.css'
-import '@/assets/css/common.css'
-import '@/assets/css/base.css'
-import '@/assets/css/header.css'
-import '@/assets/css/custom.css'
-import '@/assets/css/md.css'
+import "normalize.css";
+import "@/assets/css/common.css";
+import "@/assets/css/base.css";
+import "@/assets/css/header.css";
+import "@/assets/css/custom.css";
+import "@/assets/css/md.css";
 
-import appNav from '@/components/common/NavBar'
-import copyright from '@/components/common/FooterCopyright'
-import paginator from '@/components/common/PagePaginator'
+import appNav from "@/components/common/NavBar";
+import copyright from "@/components/common/FooterCopyright";
+import paginator from "@/components/common/PagePaginator";
 
-import '../node_modules/spinkit/css/spinkit.css'
+import "../node_modules/spinkit/css/spinkit.css";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
     appNav,
     copyright,
@@ -45,18 +45,18 @@ export default {
   },
   computed: {
     logoPath() {
-      let path = this.$store.state.themeConfig.logo
+      let path = this.$store.state.themeConfig.logo;
       if (/^(https?:\/\/|\/)/.test(path)) {
-        return path
+        return path;
       }
-      path = this.$store.state.root + path
-      return path
+      path = this.$store.state.root + path;
+      return path;
     }
   },
   data() {
-    return {}
-  },
-}
+    return {};
+  }
+};
 </script>
 
 <style>
@@ -94,6 +94,7 @@ export default {
   width: 100%;
   height: 100%;
   background-color: #42b983;
+  z-index: 99999;
 }
 
 .loading-grid-main {

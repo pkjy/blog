@@ -3,10 +3,10 @@
     <div class="archive">
       <template v-for="(post, index) in postlist">
         <h2 class="archive-year" v-if="yearChange(index)" :key="post.date">
-          {{ post.date|formdate('YYYY-MM-DD') }}
+          {{ post.date|fns('YYYY-MM-DD') }}
         </h2>
         <div class="post-item" :key="post.path">
-          <div class="post-info">{{ post.date|formdate }}</div>
+          <div class="post-info">{{ post.date|fns }}</div>
           <router-link :to="post.path" class="post-title-link">{{ post.title }}</router-link>
         </div>
       </template>
@@ -16,30 +16,30 @@
 
 <script>
 export default {
-  name: 'MainArchives',
+  name: "MainArchives",
   computed: {
     postlist() {
-      return this.$store.state.postlist
+      return this.$store.state.postlist;
     }
   },
   methods: {
     yearChange(index) {
       if (index === 0) {
-        return true
+        return true;
       }
-      const postlist = this.$options.computed.postlist.call(this)
+      const postlist = this.$options.computed.postlist.call(this);
       return (
         postlist[index].date.slice(0, 4) !==
         postlist[index - 1].date.slice(0, 4)
-      )
+      );
     }
   },
   beforeRouteEnter(to, from, next) {
     next(vm => {
-      vm.$store.commit('setView', 'archives')
-    })
+      vm.$store.commit("setView", "archives");
+    });
   }
-}
+};
 </script>
 
 <style>

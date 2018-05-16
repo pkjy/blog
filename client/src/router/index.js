@@ -3,11 +3,17 @@ import Router from 'vue-router';
 import Meta from 'vue-meta';
 
 const MainBlog = () =>
-  import ("@/components/MainBlog.vue")
+  import("@/components/MainBlog.vue")
 const MainArchives = () =>
-  import ("@/components/MainArchives.vue")
+  import("@/components/MainArchives.vue")
 const MainHome = () =>
-  import ("@/components/MainHome.vue")
+  import("@/components/MainHome.vue")
+const MainGallery = () =>
+  import("@/components/MainGallery.vue")
+const MainGalleryDirective = () =>
+  import("@/components/MainGalleryDirective.vue")
+const MainGalleryMixin = () =>
+  import("@/components/MainGalleryMixin.vue")
 
 Vue.use(Router);
 Vue.use(Meta);
@@ -16,33 +22,48 @@ const router = new Router({
   mode: 'history',
   base: '/',
   routes: [{
-      path: '/',
-      name: 'MainHome',
-      component: MainHome,
-      beforeEnter: (to, from, next) => {
-        if (to.query.path) {
-          next(to.query.path);
-        } else {
-          next();
-        }
-      },
-    }, {
-      path: '/blog/',
-      name: 'MainBlog',
-      component: MainBlog,
-      beforeEnter: (to, from, next) => {
-        if (to.query.path) {
-          next(to.query.path);
-        } else {
-          next();
-        }
-      },
+    path: '/',
+    name: 'MainHome',
+    component: MainHome,
+    beforeEnter: (to, from, next) => {
+      if (to.query.path) {
+        next(to.query.path);
+      } else {
+        next();
+      }
     },
-    {
-      path: '/archives/',
-      name: 'MainArchives',
-      component: MainArchives,
-    }
+  }, {
+    path: '/blog/',
+    name: 'MainBlog',
+    component: MainBlog,
+    beforeEnter: (to, from, next) => {
+      if (to.query.path) {
+        next(to.query.path);
+      } else {
+        next();
+      }
+    },
+  },
+  {
+    path: '/archives/',
+    name: 'MainArchives',
+    component: MainArchives,
+  },
+  {
+    path: '/gallery/',
+    name: 'MainGallery',
+    component: MainGallery,
+  },
+  {
+    path: '/gallery/directive',
+    name: 'MainGalleryDirective',
+    component: MainGalleryDirective,
+  },
+  {
+    path: '/gallery/mixin',
+    name: 'MainGalleryMixin',
+    component: MainGalleryMixin,
+  }
   ],
   scrollBehavior(to) {
     if (to.hash) {

@@ -9,15 +9,27 @@ import App from './App';
 import router from './router';
 import store from './store';
 
+import ElementUI from 'element-ui';
+import '@/assets/css/theme/index.css';
+Vue.use(ElementUI)
+
 Vue.config.productionTip = false;
 
+// 将date-fns作为全局的filter
 import {
   format
 } from "date-fns"
-Vue.filter("formdate", function (value, formatdata = "YYYY-MM-DD HH:mm") {
+Vue.filter("fns", function (value, formatdata = "YYYY-MM-DD HH:mm") {
   if (value === void 0) return "-"
   return format(value, formatdata)
 })
+
+// 水波纹指令
+import wave from "./directives/waves/index"
+Vue.use(wave)
+// 水波纹指令
+import canvasDownload from "@/directives/download/index"
+Vue.use(canvasDownload)
 
 /* eslint-disable no-new */
 new Vue({
