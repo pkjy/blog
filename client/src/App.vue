@@ -24,6 +24,7 @@
 
 <script>
 import "normalize.css";
+import "@/assets/css/theme/index.css";
 import "@/assets/css/common.css";
 import "@/assets/css/base.css";
 import "@/assets/css/header.css";

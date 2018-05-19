@@ -13,3 +13,60 @@
 .absolute {
   position: absolute;
 }
+
+.text-center{
+  text-align: center;
+}
+
+.m_1{
+  margin-bottom:6px;
+}
+.m_2{
+  margin-bottom:12px;
+}
+.m_3{
+  margin-bottom:18px;
+}
+.m_4{
+  margin-bottom:24px;
+}
+
+.m-l_1{
+  margin-left:6px;
+}
+.m-l_2{
+  margin-left:12px;
+}
+.m-l_3{
+  margin-left:18px;
+}
+.m-l_4{
+  margin-left:24px;
+}
+
+
+.m-r_1{
+  margin-right:6px;
+}
+.m-r_2{
+  margin-right:12px;
+}
+.m-r_3{
+  margin-right:18px;
+}
+.m-r_4{
+  margin-right:24px;
+}
+
+.p_1{
+  padding-bottom:6px;
+}
+.p_2{
+  padding-bottom:12px;
+}
+.p_3{
+  padding-bottom:18px;
+}
+.p_4{
+  padding-bottom:24px;
+}

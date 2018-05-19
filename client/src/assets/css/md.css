@@ -37,9 +37,11 @@ pre {
   width: auto;
   height: 18px;
 }
-
+pre{
+  position: relative;
+}
 .highlight.html .code:after,
-.highlight.js .code:after,
+.lang-javascript:after,
 .highlight.bash .code:after,
 .highlight.css .code:after,
 .highlight.scss .code:after,
@@ -71,7 +73,7 @@ pre {
   content: "HTML";
 }
 
-.highlight.js .code:after {
+.lang-javascript:after {
   content: "JS";
 }
 

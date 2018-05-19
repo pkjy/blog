@@ -4,7 +4,7 @@
       <template slot="header">mixin之一键复制：</template>
       <template slot="content">
         <el-input v-model="input" placeholder="请输入内容" style="width:300px;"></el-input>
-        <el-button type="primary" @click="execCopy(input)">复制</el-button>
+        <el-button class="m-l_2" type="primary" @click="execCopy(input)">复制</el-button>
       </template>
       <template slot="desc">
         简介：引入Tools的Mixin之后，即可调用execCopy函数进行复制。该函数接收一个参数，即需要复制的内容。
@@ -40,7 +40,7 @@
         <div>
           <qrcode-vue :value="shareLink" id="mycanvas" :size="150"></qrcode-vue>
         </div>
-        <span class="block space-top-1">图片名称：</span>
+        <div class="block space-top-1">图片名称：</div>
         <el-input type="text" v-model="fileName" style="width:150px;"></el-input><br>
         <el-button type="primary" style="width:150px;margin:10px auto 0;" @click="downloadCanvas">下载</el-button>
       </template>
@@ -54,7 +54,7 @@
       <template slot="content">
         <el-date-picker v-model="search" type="daterange" align="right" unlink-panels range-separator="至" :clearable="false" start-placeholder="开始日期" end-placeholder="结束日期" size="small" @change="getLendingOrderListAction">
         </el-date-picker>
-        <el-button @click="mixinSelectDateRange(0,getLendingOrderListAction)" size="small">今日</el-button>
+        <el-button @click="mixinSelectDateRange(0,getLendingOrderListAction)" size="small" class="m-l_2">今日</el-button>
         <el-button @click="mixinSelectDateRange(1,getLendingOrderListAction)" size="small">昨日</el-button>
         <el-button @click="mixinSelectDateRange(2,getLendingOrderListAction)" size="small">最近7天</el-button>
         <el-button @click="mixinSelectDateRange(3,getLendingOrderListAction)" size="small">最近30天</el-button>

@@ -18,7 +18,7 @@
         <div>
           <qrcode-vue :value="shareLink" :size="150" id="mycanvas" v-download="{status:downloadTag,fileName:fileName}"></qrcode-vue>
         </div>
-        <span class="block space-top-1">图片名称：</span>
+        <div class="block space-top-1">图片名称：</div>
         <el-input type="text" v-model="fileName" style="width:150px;"></el-input><br>
         <el-button size="small" type="primary" style="width:150px;margin:10px auto 0;" @click="downloadTag=!downloadTag">下载</el-button>
       </template>
