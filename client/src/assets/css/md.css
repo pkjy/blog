@@ -14,49 +14,49 @@ pre {
   overflow-x: auto;
 }
 
-.highlight table,
-.highlight tr,
-.highlight td {
+.post table,
+.post tr,
+.post td {
   width: 100%;
   border-collapse: collapse;
   padding: 0;
   margin: 0;
 }
 
-.highlight .gutter {
+.gutter {
   display: none;
 }
 
-.highlight .code pre {
+pre {
   padding: 1.2em 1.4em;
   line-height: 1.5em;
   margin: 0;
 }
 
-.highlight .code pre .line {
+pre .line {
   width: auto;
   height: 18px;
 }
 pre{
   position: relative;
 }
-.highlight.html .code:after,
+.lang-html:after,
 .lang-javascript:after,
-.highlight.bash .code:after,
-.highlight.css .code:after,
-.highlight.scss .code:after,
-.highlight.diff .code:after,
-.highlight.java .code:after,
-.highlight.xml .code:after,
-.highlight.python .code:after,
-.highlight.json .code:after,
-.highlight.swift .code:after,
-.highlight.ruby .code:after,
-.highlight.perl .code:after,
-.highlight.php .code:after,
-.highlight.c .code:after,
-.highlight.cpp .code:after,
-.highlight.ts .code:after {
+.highlight.bash:after,
+.highlight.css:after,
+.highlight.scss:after,
+.highlight.diff:after,
+.highlight.java:after,
+.highlight.xml:after,
+.highlight.python:after,
+.highlight.json:after,
+.highlight.swift:after,
+.highlight.ruby:after,
+.highlight.perl:after,
+.highlight.php:after,
+.highlight.c:after,
+.highlight.cpp:after,
+.highlight.ts:after {
   position: absolute;
   top: 0;
   right: 0;
@@ -69,7 +69,7 @@ pre{
   font-weight: 600;
 }
 
-.highlight.html .code:after {
+.lang-html:after {
   content: "HTML";
 }
 
@@ -77,71 +77,71 @@ pre{
   content: "JS";
 }
 
-.highlight.bash .code:after {
+.highlight.bash:after {
   content: "BASH";
 }
 
-.highlight.css .code:after {
+.highlight.css:after {
   content: "CSS";
 }
 
-.highlight.scss .code:after {
+.highlight.scss:after {
   content: "SCSS";
 }
 
-.highlight.diff .code:after {
+.highlight.diff:after {
   content: "DIFF";
 }
 
-.highlight.java .code:after {
+.highlight.java:after {
   content: "JAVA";
 }
 
-.highlight.xml .code:after {
+.highlight.xml:after {
   content: "XML";
 }
 
-.highlight.python .code:after {
+.highlight.python:after {
   content: "PYTHON";
 }
 
-.highlight.json .code:after {
+.highlight.json:after {
   content: "JSON";
 }
 
-.highlight.swift .code:after {
+.highlight.swift:after {
   content: "SWIFT";
 }
 
-.highlight.ruby .code:after {
+.highlight.ruby:after {
   content: "RUBY";
 }
 
-.highlight.perl .code:after {
+.highlight.perl:after {
   content: "PERL";
 }
 
-.highlight.php .code:after {
+.highlight.php:after {
   content: "PHP";
 }
 
-.highlight.c .code:after {
+.highlight.c:after {
   content: "C";
 }
 
-.highlight.java .code:after {
+.highlight.java:after {
   content: "JAVA";
 }
 
-.highlight.cpp .code:after {
+.highlight.cpp:after {
   content: "CPP";
 }
 
-.highlight.ts .code:after {
+.highlight.ts:after {
   content: "TS";
 }
 
-.highlight.cpp .code:after {
+.highlight.cpp:after {
   content: 'C++';
 }
 

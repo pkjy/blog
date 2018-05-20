@@ -51,7 +51,7 @@ function updatePostList(postListFullFile, timeStamp, file) {
 }
 
 function createFile(path, timeStamp) {
-  let data = new Post(timeStamp, readmeContentObj.title, readmeContentObj.excerpt)
+  let data = new Post(timeStamp, readmeContentObj.title, readmeContentObj.content)
   fs.appendFile(`${path}/index.json`, JSON.stringify(data), (err) => {
     if (err) throw err;
     console.log('Post的文章已经生成');

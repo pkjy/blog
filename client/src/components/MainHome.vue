@@ -2,62 +2,14 @@
   <section class="main-content">
     <h2>Self-introduction</h2>
     <p>
-      <strong>基本信息：</strong>彭君怡，男，湖南人文科技学院
+      <strong>基本信息：</strong>彭君怡，男，17年毕业，
     </p>
     <p>
-      <strong>职业技能：</strong>HTML\JS\CSS\JQ mobile\Webpack\Vue\Vuex\Vue-router\Nuxt\Express</p>
+      <strong>主技能：</strong>HTML\JS\CSS\Vue全家桶</p>
     <p>
-      <strong>其他技能：</strong>基于(PS\AE\会声会影等)自学的基础上我能搞定</p>
-    <ul>
-      <li>个性化的视频短片</li>
-      <li>拿得出手的传单海报</li>
-      <li>简洁得体的PPT</li>
-      <li>其它需要我完成的任务</li>
-    </ul>
-    <h2>Demo.(College)</h2>
-    <strong>HTML+CSS静态网页类</strong>
-    <ul>
-      <li>Demo1，大型企业官网静态页面→
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part1/task07.html" title="task07">查看</a>
-      </li>
-      <li>Demo2，信息查询管理静态页面→
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part1/task09.html" title="task09">查看</a>
-      </li>
-    </ul>
-    <strong>Javascript</strong>
-    <ul>
-      <li>Demo1，算法可视化(简单的冒泡算法)→
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part2/task19/" title="task19">查看</a>
-      </li>
-      <li>Demo2，表格控件(支持内容排序、首行冻结)→
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part3/task38/" title="task38">查看</a>
-      </li>
-      <li>Demo3，日历控件→
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part3/task40/" title="task40">查看</a>
-      </li>
-      <li>Demo4，听指令的小方块→
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part2/task35/" title="task35">查看</a>
-      </li>
-      <li>Demo5，图片马赛克化——
-        <a target="_blank" href="https://pkjy.github.io/front-end-skills/src/mosaic-canvas/">查看</a>
-      </li>
-    </ul>
-    <strong>综合类</strong>
-    <ul>
-      <li>Demo1，jQuery Mobile框架写的计时功能的TODO，WEB版+安卓版——
-        <a target="_blank" href="https://pkjy.github.io/front-end-skills/src/Hours/" title="Web版">查看Web版</a>——
-        <a target="_blank" href="https://pkjy.github.io/front-end-skills/src/Hours/Hours.apk" title="APK下载">下载
-          <i class="fa fa-android fa-2x"></i>
-        </a>
-      </li>
-      <li>Demo2，微型调查问卷平台——
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part4/task50/index.html" title="task50">查看</a>
-      </li>
-      <li>Demo3，一个相册库，集成三种布局方式——
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part4/task51/index.html" title="task51">查看</a>
-      </li>
-    </ul>
-    <h2>Study&amp;Life</h2>
+      <strong>副技能：</strong>PS\AE\会声会影等使用</p>
+
+    <h2>Experience</h2>
     <table>
       <tbody>
         <tr>
@@ -65,7 +17,13 @@
           <th>Experience</th>
         </tr>
         <tr>
-          <td>2016.03-</td>
+          <td>2017.02-</td>
+          <td>
+            <a target="_blank" href="http://spiritframe.com">湖南心镜科技有限公司</a>前端<br> 负责多个项目的前端开发（PC端、Mobile端、APP混合开发）
+          </td>
+        </tr>
+        <tr>
+          <td>2016.03-2017.03</td>
           <td>
             <a target="_blank" href="https://ife.baidu.com">百度IFE</a>——2016年春季班学习——
             <a target="_blank" href="https://github.com/pkjy/ife-task">查看仓库</a>
@@ -111,11 +69,6 @@
           </td>
         </tr>
         <tr>
-          <td colspan="2">
-            注：部分作品创意非原创
-          </td>
-        </tr>
-        <tr>
           <td>证书</td>
           <td>
             <ul>
@@ -127,9 +80,49 @@
         </tr>
       </tbody>
     </table>
-    <h2>Learning</h2>
-    <a target="_blank" href="https://github.com/pkjy/pkjy.github.io/tree/master/Reading-Notes" title="Reading details">Book Notes
-    </a>
+    <h2>Demo.(College)</h2>
+    <strong>HTML+CSS静态网页类</strong>
+    <ul>
+      <li>Demo1，大型企业官网静态页面→
+        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part1/task07.html" title="task07">查看</a>
+      </li>
+      <li>Demo2，信息查询管理静态页面→
+        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part1/task09.html" title="task09">查看</a>
+      </li>
+    </ul>
+    <strong>Javascript</strong>
+    <ul>
+      <li>Demo1，算法可视化(简单的冒泡算法)→
+        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part2/task19/" title="task19">查看</a>
+      </li>
+      <li>Demo2，表格控件(支持内容排序、首行冻结)→
+        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part3/task38/" title="task38">查看</a>
+      </li>
+      <li>Demo3，日历控件→
+        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part3/task40/" title="task40">查看</a>
+      </li>
+      <li>Demo4，听指令的小方块→
+        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part2/task35/" title="task35">查看</a>
+      </li>
+      <li>Demo5，图片马赛克化——
+        <a target="_blank" href="https://pkjy.github.io/front-end-skills/src/mosaic-canvas/">查看</a>
+      </li>
+    </ul>
+    <strong>综合类</strong>
+    <ul>
+      <li>Demo1，jQuery Mobile框架写的计时功能的TODO，WEB版+安卓版——
+        <a target="_blank" href="https://pkjy.github.io/front-end-skills/src/Hours/" title="Web版">查看Web版</a>——
+        <a target="_blank" href="https://pkjy.github.io/front-end-skills/src/Hours/Hours.apk" title="APK下载">下载
+          <i class="fa fa-android fa-2x"></i>
+        </a>
+      </li>
+      <li>Demo2，微型调查问卷平台——
+        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part4/task50/index.html" title="task50">查看</a>
+      </li>
+      <li>Demo3，一个相册库，集成三种布局方式——
+        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part4/task51/index.html" title="task51">查看</a>
+      </li>
+    </ul>
   </section>
 </template>
 

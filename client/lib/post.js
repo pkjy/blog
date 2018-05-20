@@ -1,12 +1,12 @@
 // 生成post的构造函数
 
 class Post {
-  constructor(timeStamp, title, excerpt) {
+  constructor(timeStamp, title, content) {
     this.path = this.timeStampHandle(timeStamp);
     this.title = title;
-    this.date = timeStamp;
+    this.date = new Date(Number(timeStamp));
     this.updated = new Date().getTime()
-    this.excerpt = excerpt;
+    this.content = content;
     this.prev = this.getPrev();
     this.next = this.getNext();
   }
