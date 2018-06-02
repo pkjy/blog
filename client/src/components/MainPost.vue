@@ -9,21 +9,21 @@
 </template>
 
 <script>
-import imgLoadAni from "@/utils/img-load-animation";
-import { md2html } from "@/utils/markdown-and-html";
+import imgLoadAni from '@/utils/img-load-animation'
+import { md2html } from '@/utils/markdown-and-html'
 export default {
-  name: "MainPost",
+  name: 'MainPost',
   computed: {
     postTitle() {
-      return this.$store.state.currentPost.title;
+      return this.$store.state.currentPost.title
     },
     postDate() {
       return this.$store.state.currentPost.date
         ? this.$store.state.currentPost.date
-        : new Date();
+        : new Date()
     },
     postContent() {
-      return md2html(this.$store.state.currentPost.content || "");
+      return md2html(this.$store.state.currentPost.content || '')
     }
   },
   // beforeRouteEnter(to, from, next) {
@@ -32,24 +32,28 @@ export default {
   //   })
   // },
   beforeRouteLeave(to, from, next) {
-    this.$store.commit("clearCurrent");
-    next();
+    this.$store.commit('clearCurrent')
+    next()
   },
   created() {
-    this.$store.dispatch("getPost", this.$route.path);
+    this.$store.dispatch('getPost', this.$route.path)
   },
   watch: {
     $route: function(val, old) {
-      if (val) this.$store.dispatch("getPost", val.path);
+      if (val) this.$store.dispatch('getPost', val.path)
     }
   },
   updated: imgLoadAni
-};
+}
 </script>
 
 <style>
 .post {
   padding-top: 1em;
+}
+
+.post-title {
+  color: #27cfc3;
 }
 
 .post-block .post-info {
@@ -87,7 +91,7 @@ export default {
 .post-content h4 a:before,
 .post-content h5 a:before,
 .post-content h6 a:before {
-  content: "#";
+  content: '#';
   color: #42b983;
   position: absolute;
   left: -0.7em;
@@ -99,7 +103,7 @@ export default {
 .post-content h4 a:before,
 .post-content h5 a:before,
 .post-content h6 a:before {
-  content: "";
+  content: '';
 }
 
 .post-content h2,
@@ -153,7 +157,7 @@ export default {
   position: absolute;
   top: 14px;
   left: -12px;
-  content: "!";
+  content: '!';
   width: 20px;
   height: 20px;
   border-radius: 100%;
@@ -163,7 +167,7 @@ export default {
   font-weight: bold;
   text-align: center;
   background-color: #f66;
-  font-family: "Dosis", "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Dosis', 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
 }
 </style>
 

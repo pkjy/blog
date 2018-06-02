@@ -1,9 +1,9 @@
 {
   "path": "/2018/05/10/second/",
-  "title": "[测试] Hello World second",
+  "title": "nodejs文件操作模块FS（File System）常用函数简明总结",
   "date": "2018-05-10T03:33:34.000Z",
   "updated": "2018-05-10T08:45:41.927Z",
-  "content": "### h啊哈哈哈哈\n``` javascript\n\tfunciton(){\n\tconsole.log('balala')\n\t}\n```\n",
+  "content": "## 首先是一类最常规的读写函数，函数名称和形式，应该是起源于C语言的。\n\n``` bash\nfs.open(文件路径,读写标识,[文件mode值,666],回调函数(err,文件句柄fd));          \nfs.read(文件句柄fd,被写入的buffer,offset,length,position,回调函数(err, bytesRead, buffer));          \nfs.write(文件句柄fd,被读取的buffer,offset,length,position,回调函数(err,bytesWritten,buffer));          \nfs.close(文件句柄,回调函数)          \nfs.truncate(文件句柄,截断长度,回调函数);          \nfs.fsync(文件句柄,回调函数);\n```\n\n## 直接对文件进行读写的，用起来比较方便。\n\n``` bash\nfs.readFile(文件名,编码,回调函数(err,data));       \nfs.writeFile(文件名,数据,编码,回调函数(err));       \nfs.appendFile(文件名,数据,编码,回调函数(err));\n```\n\n## 其它常用文件操作\n\n``` bash \n#判断文件是否存在      \nfs.exists(文件路径,callback(是否存在));      \n重命名      \nfs.rename(旧文件名,新文件名,回调函数);      \n文件所有者变更      \nfs.chown(文件名,uid,gid,回调函数);\nfs.fchown(文件句柄fd,uid,gid,回调函数);\nfs.lchown(链接路径,uid,gid,回调函数);      \n文件权限变更      \nfs.chmod(文件名,mode,回调函数);\nfs.fchmod(文件句柄,mode,回调函数);\nfs.lchmod(链接路径,mode,回调函数);      \n文件信息      \nfs.stat(文件路径,回调函数(err.fs.Stats对象));\nfs.fstat(文件句柄fd,回调函数(err.fs.Stats对象));\nfs.lstat(链接路径,回调函数(err.fs.Stats对象));      \n文件时间      \nfs.utimes(文件路径,访问时间,新建时间,回调函数);/fs.futimes(文件句柄,访问时间,新建时间,回调函数);      \n监视文件      \nfs.watchFile(文件名,[options],listener_callback(当前文件的stats,改变前的stats));      \nfs.unwatchFile(文件名);\n```\n\n## 目录操作\n\n``` bash\nfs.mkdir(路径,权限mode/777,回调函数);    \nfs.rmdir(路径,回调函数);    \nfs.readdir(路径,回调函数(err,fileNameArray));\n```\n\n## 链接文件操作\n\n``` bash\n创建一个链接   \nfs.link(srcpath, dstpath, [callback])   \nfs.symlink(destination, path, [type], [callback])  \n读取链接指向的路径   \nfs.readlink(path, [callback(err,linkstr)])   \nfs.unlink(path,[callback]);\n```",
   "prev": "2018/05/09/hello-wolrd/",
   "next": ""
 }

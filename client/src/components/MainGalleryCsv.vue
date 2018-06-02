@@ -23,11 +23,10 @@
 </template>
 
 <script>
-import ExampleCard from "@/components/common/ExampleCard";
-import json2csv from "@/utils/json2csv.js";
-
+import ExampleCard from '@/components/common/ExampleCard'
+import json2csv from '@/utils/json2csv.js'
 export default {
-  name: "MainGalleryCsv",
+  name: 'MainGalleryCsv',
   components: {
     ExampleCard
   },
@@ -35,55 +34,55 @@ export default {
     return {
       tableData: [
         {
-          date: "2016-05-02",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1518 弄"
+          date: '2016-05-02',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1518 弄'
         },
         {
-          date: "2016-05-04",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1517 弄"
+          date: '2016-05-04',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1517 弄'
         },
         {
-          date: "2016-05-01",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1519 弄"
+          date: '2016-05-01',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1519 弄'
         },
         {
-          date: "2016-05-03",
-          name: "王小虎",
-          address: "上海市普陀区金沙江路 1516 弄"
+          date: '2016-05-03',
+          name: '王小虎',
+          address: '上海市普陀区金沙江路 1516 弄'
         }
       ]
-    };
+    }
   },
   methods: {
     download() {
-      let copydata = [];
-      let columns = {};
-      let data = [];
+      let copydata = []
+      let columns = {}
+      let data = []
 
-      copydata = this.tableData.slice(0);
+      copydata = this.tableData.slice(0)
       data = copydata.map(v => {
         return {
           date: v.date,
           name: v.name,
           address: v.address
-        };
-      });
+        }
+      })
       columns = {
-        title: ["日期", "姓名", "地址"],
-        key: ["date", "name", "address"]
-      };
+        title: ['日期', '姓名', '地址'],
+        key: ['date', 'name', 'address']
+      }
 
       json2csv.setDataConver({
         data: data,
         fileName: `下载CSV`,
         columns: columns
-      });
+      })
     }
   },
   created() {},
   mounted() {}
-};
+}
 </script>

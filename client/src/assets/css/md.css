@@ -39,24 +39,25 @@ pre .line {
 }
 pre{
   position: relative;
+  overflow: auto;
 }
 .lang-html:after,
 .lang-javascript:after,
-.highlight.bash:after,
-.highlight.css:after,
-.highlight.scss:after,
-.highlight.diff:after,
-.highlight.java:after,
-.highlight.xml:after,
-.highlight.python:after,
-.highlight.json:after,
-.highlight.swift:after,
-.highlight.ruby:after,
-.highlight.perl:after,
-.highlight.php:after,
-.highlight.c:after,
-.highlight.cpp:after,
-.highlight.ts:after {
+.lang-bash:after,
+.lang-css:after,
+.lang-scss:after,
+.lang-diff:after,
+.lang-java:after,
+.lang-xml:after,
+.lang-python:after,
+.lang-json:after,
+.lang-swift:after,
+.lang-ruby:after,
+.lang-perl:after,
+.lang-php:after,
+.lang-c:after,
+.lang-cpp:after,
+.lang-ts:after {
   position: absolute;
   top: 0;
   right: 0;
@@ -77,71 +78,71 @@ pre{
   content: "JS";
 }
 
-.highlight.bash:after {
+.lang-bash:after {
   content: "BASH";
 }
 
-.highlight.css:after {
+.lang-css:after {
   content: "CSS";
 }
 
-.highlight.scss:after {
+.lang-scss:after {
   content: "SCSS";
 }
 
-.highlight.diff:after {
+.lang-diff:after {
   content: "DIFF";
 }
 
-.highlight.java:after {
+.lang-java:after {
   content: "JAVA";
 }
 
-.highlight.xml:after {
+.lang-xml:after {
   content: "XML";
 }
 
-.highlight.python:after {
+.lang-python:after {
   content: "PYTHON";
 }
 
-.highlight.json:after {
+.lang-json:after {
   content: "JSON";
 }
 
-.highlight.swift:after {
+.lang-swift:after {
   content: "SWIFT";
 }
 
-.highlight.ruby:after {
+.lang-ruby:after {
   content: "RUBY";
 }
 
-.highlight.perl:after {
+.lang-perl:after {
   content: "PERL";
 }
 
-.highlight.php:after {
+.lang-php:after {
   content: "PHP";
 }
 
-.highlight.c:after {
+.lang-c:after {
   content: "C";
 }
 
-.highlight.java:after {
+.lang-java:after {
   content: "JAVA";
 }
 
-.highlight.cpp:after {
+.lang-cpp:after {
   content: "CPP";
 }
 
-.highlight.ts:after {
+.lang-ts:after {
   content: "TS";
 }
 
-.highlight.cpp:after {
+.lang-cpp:after {
   content: 'C++';
 }
 

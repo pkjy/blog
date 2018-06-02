@@ -127,102 +127,102 @@
 </template>
 
 <script>
-import imgLoadAni from "@/utils/img-load-animation";
+import imgLoadAni from '@/utils/img-load-animation'
 
 export default {
-  name: "MainHome",
+  name: 'MainHome',
   computed: {},
   data() {
     return {
       interval: null
-    };
+    }
   },
   methods: {
     throttle(method, context) {
       //用函数节流优化rezise——《高程》
-      clearTimeout(method.tId);
+      clearTimeout(method.tId)
       method.tId = setTimeout(function() {
-        method.call(context);
-      }, 100);
+        method.call(context)
+      }, 100)
     },
     renderCanvas() {
-      var test = document.getElementById("myCanvas");
+      var test = document.getElementById('myCanvas')
       if (test) {
-        document.body.removeChild(test);
+        document.body.removeChild(test)
       }
 
-      var box = document.getElementById("app"),
-        canvas = document.createElement("canvas");
-      canvas.height = box.offsetHeight;
-      canvas.width = document.body.offsetWidth; //Chrome里有18像素的滚动条？改成body的offsetWidth完美解决
-      canvas.id = "myCanvas";
+      var box = document.getElementById('app'),
+        canvas = document.createElement('canvas')
+      canvas.height = box.offsetHeight
+      canvas.width = document.body.offsetWidth //Chrome里有18像素的滚动条？改成body的offsetWidth完美解决
+      canvas.id = 'myCanvas'
 
       // var headerHeight = document.getElementById('page-header').offsetHeight
       // canvas.style.marginTop = headerHeight + 'px'
 
-      var ctx = canvas.getContext("2d");
-      document.body.appendChild(canvas);
-      this.interval = setInterval(loop, 36);
+      var ctx = canvas.getContext('2d')
+      document.body.appendChild(canvas)
+      this.interval = setInterval(loop, 36)
 
       function Circle(x, y, r, color) {
-        this.x = x;
-        this.y = y;
-        this.r = r;
-        this.color = color;
-        this.grow = 3;
-        this.tremble = Math.random() - 0.5;
-        this.range = (Math.random() - 0.5) * 5;
+        this.x = x
+        this.y = y
+        this.r = r
+        this.color = color
+        this.grow = 3
+        this.tremble = Math.random() - 0.5
+        this.range = (Math.random() - 0.5) * 5
         this.drawCircle = function() {
-          ctx.beginPath();
-          ctx.fillStyle = this.color;
-          ctx.arc(this.x, this.y, r, 0, Math.PI * 2);
-          ctx.fill();
-          ctx.closePath();
-        };
+          ctx.beginPath()
+          ctx.fillStyle = this.color
+          ctx.arc(this.x, this.y, r, 0, Math.PI * 2)
+          ctx.fill()
+          ctx.closePath()
+        }
         this.pos = function() {
-          var value = this.grow * this.tremble;
-          this.x = this.x + this.range;
-          this.y += value;
-        };
+          var value = this.grow * this.tremble
+          this.x = this.x + this.range
+          this.y += value
+        }
       }
 
-      var arr = [];
+      var arr = []
       function loop() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-        var col = "rgba(39,207,195,0.3)";
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        var col = 'rgba(39,207,195,0.3)'
 
         var circle = new Circle(
           Math.random() * canvas.width,
           Math.random() * canvas.height,
           Math.random() * 5,
           col
-        );
-        arr.push(circle);
+        )
+        arr.push(circle)
         for (var i in arr) {
-          arr[i].drawCircle();
-          arr[i].pos();
+          arr[i].drawCircle()
+          arr[i].pos()
         }
         if (arr.length > 300) {
-          arr.shift();
+          arr.shift()
         }
       }
     }
   },
   beforeDestroy() {
-    window.clearInterval(this.interval);
-    const domCanvas = document.getElementById("myCanvas");
-    document.body.removeChild(domCanvas);
+    window.clearInterval(this.interval)
+    const domCanvas = document.getElementById('myCanvas')
+    document.body.removeChild(domCanvas)
   },
   beforeRouteEnter(to, from, next) {
     next(vm => {
-      vm.$store.commit("setView", "home");
-    });
+      vm.$store.commit('setView', 'home')
+    })
   },
   mounted() {
-    this.throttle(this.renderCanvas);
+    this.throttle(this.renderCanvas)
   },
   updated: imgLoadAni
-};
+}
 </script>
 <style>
 .main-content table {
@@ -251,5 +251,13 @@ export default {
 .main-content table th,
 .main-content table td {
   border: 1px solid #eee;
+}
+
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5 {
+  color: #ef951b;
 }
 </style>

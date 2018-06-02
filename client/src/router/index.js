@@ -16,6 +16,8 @@ const MainGalleryMixin = () =>
   import("@/components/MainGalleryMixin.vue")
 const MainGalleryCsv = () =>
   import("@/components/MainGalleryCsv.vue")
+const MainGalleryQrcodePure = () =>
+  import("@/components/MainGalleryQrcodePure.vue")
 
 Vue.use(Router);
 Vue.use(Meta);
@@ -70,6 +72,11 @@ const router = new Router({
     path: '/gallery/csv',
     name: 'MainGalleryCsv',
     component: MainGalleryCsv,
+  },
+  {
+    path: '/gallery/qrcode-pure',
+    name: 'MainGalleryQrcodePure',
+    component: MainGalleryQrcodePure,
   }
   ],
   scrollBehavior(to) {
