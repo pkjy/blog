@@ -15,7 +15,7 @@
     "element-ui": "^2.3.8",
     "marked": "^0.3.18",
     "normalize.css": "^8.0.0",
-    "qrcode-pure": "^0.0.2",
+    "qrcode-pure": "^0.0.3",
     "qrcode.vue": "^1.6.0",
     "spinkit": "^1.2.5",
     "vue": "^2.5.16",

@@ -3,14 +3,11 @@
     <example-card>
       <template slot="header">二维码解码</template>
       <template slot="content">
-        <input type="file" @change="handleChange">
+        <input type="file" multiple @change="handleChange">
         <div class="text-left" style="margin-top:16px;">
-          <div class="canvas-box">
-            <canvas ref="decode-canvas"></canvas>
-          </div>
           <div>
-            <el-button @click="decode" type="primary" size="small">解码</el-button>
-            二维码值为：{{result}}
+            二维码值为：
+            <span style="text-decoration:underline;margin-right:5px;" v-for="(item,idx) in result" :key="idx">{{item.text}} </span>
           </div>
         </div>
       </template>
@@ -50,45 +47,44 @@ export default {
   },
   data() {
     return {
-      result: '',
+      result: [],
       qrvalue: ''
     }
   },
   methods: {
-    decode() {
-      let result = qrdecode(this.$refs['decode-canvas'])
-
-      if (result) {
-        this.result = result
-        console.log('当前二维码值为：', result)
-      }
-    },
     handleChange(e) {
-      var canvas = this.$refs['decode-canvas'],
-        ctx = canvas.getContext('2d'),
-        file = e.target.files[0],
-        reader = new FileReader()
+      if (e.target.files.length === 0) return
+      this.result = []
+      let self = this
+      Object.values(e.target.files).forEach(v => {
+        let canvas = document.createElement('canvas'),
+          ctx = canvas.getContext('2d'),
+          reader = new FileReader()
 
-      reader.onload = function(e) {
-        var img = new Image()
+        reader.onload = function(e) {
+          var img = new Image()
 
-        img.onload = function() {
-          canvas.width = img.width
-          canvas.height = img.height
-          ctx.drawImage(img, 0, 0)
+          img.onload = function() {
+            canvas.width = img.width
+            canvas.height = img.height
+            ctx.drawImage(img, 0, 0)
+
+            let result = qrdecode(canvas)
+            self.result.push(result)
+          }
+
+          img.src = e.target.result
         }
 
-        img.src = e.target.result
-      }
-
-      file && reader.readAsDataURL(file)
+        v && reader.readAsDataURL(v)
+      })
     },
     encode() {
       let result = qrencode({ text: this.qrvalue })
       if (this.$refs.canvasBox.hasChildNodes()) {
         this.$refs.canvasBox.removeChild(this.$refs.canvasBox.firstChild)
       }
-      this.$refs.canvasBox.appendChild(result)
+      this.$refs.canvasBox.appendChild(result.canvas)
     }
   },
   created() {},

@@ -55,7 +55,6 @@ new Vue({
           name: 'NotFound',
           component: NotFound,
         });
-        console.log('111', router, routes)
         router.addRoutes(routes);
         // const logo = document.getElementById('logo');
         // if (logo.complete) {
