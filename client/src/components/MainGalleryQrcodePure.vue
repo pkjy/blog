@@ -40,6 +40,7 @@ import ExampleCard from '@/components/common/ExampleCard'
 import qrdecode from 'qrcode-pure/lib/qrdecode'
 import qrencode from 'qrcode-pure/lib/qrencode'
 
+import qrcodePure from 'qrcode-pure'
 export default {
   name: 'MainGalleryQrcodePure',
   components: {
@@ -70,6 +71,7 @@ export default {
             ctx.drawImage(img, 0, 0)
 
             let result = qrdecode(canvas)
+            // let result = qrcodePure.QRDecode(canvas)
             self.result.push(result)
           }
 
@@ -87,7 +89,9 @@ export default {
       this.$refs.canvasBox.appendChild(result.canvas)
     }
   },
-  created() {},
+  created() {
+    console.log('sss', qrcodePure)
+  },
   mounted() {}
 }
 </script>
