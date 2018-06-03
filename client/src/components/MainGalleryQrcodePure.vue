@@ -5,11 +5,11 @@
       <template slot="content">
         <input type="file" @change="handleChange">
         <div class="text-left" style="margin-top:16px;">
-          <div style="width:120px;height:120px;border:1px solid #000;margin-bottom:12px;">
-            <canvas ref="decode-canvas" style="width:100%;height:100%;"></canvas>
+          <div class="canvas-box">
+            <canvas ref="decode-canvas"></canvas>
           </div>
           <div>
-            <el-button @click="decode" type="primary">解码</el-button>
+            <el-button @click="decode" type="primary" size="small">解码</el-button>
             二维码值为：{{result}}
           </div>
         </div>
@@ -19,12 +19,30 @@
         <a href="https://github.com/pkjy/qrcode-pure">qrcode-pure</a>。
       </template>
     </example-card>
+
+    <example-card>
+      <template slot="header">二维码编码</template>
+      <template slot="content">
+        <input placeholder="请输入二维码值" type="text" v-model="qrvalue">
+        <el-button @click="encode" type="primary" size="mini" class="m-l_2">编码</el-button>
+        <div class="text-left" style="margin-top:16px;">
+          <div class="canvas-box" ref="canvasBox">
+          </div>
+        </div>
+      </template>
+      <template slot="desc">
+        简介：输入需要编码的值，再点击编码即可。项目仓库
+        <a href="https://github.com/pkjy/qrcode-pure">qrcode-pure</a>。
+      </template>
+    </example-card>
   </div>
 </template>
 
 <script>
 import ExampleCard from '@/components/common/ExampleCard'
-import qedecode from 'qrcode-pure/lib/qrdecode'
+import qrdecode from 'qrcode-pure/lib/qrdecode'
+import qrencode from 'qrcode-pure/lib/qrencode'
+
 export default {
   name: 'MainGalleryQrcodePure',
   components: {
@@ -32,12 +50,13 @@ export default {
   },
   data() {
     return {
-      result: ''
+      result: '',
+      qrvalue: ''
     }
   },
   methods: {
     decode() {
-      let result = qedecode(this.$refs['decode-canvas'])
+      let result = qrdecode(this.$refs['decode-canvas'])
 
       if (result) {
         this.result = result
@@ -63,9 +82,29 @@ export default {
       }
 
       file && reader.readAsDataURL(file)
+    },
+    encode() {
+      let result = qrencode({ text: this.qrvalue })
+      if (this.$refs.canvasBox.hasChildNodes()) {
+        this.$refs.canvasBox.removeChild(this.$refs.canvasBox.firstChild)
+      }
+      this.$refs.canvasBox.appendChild(result)
     }
   },
   created() {},
   mounted() {}
 }
 </script>
+
+<style>
+.canvas-box {
+  width: 120px;
+  height: 120px;
+  border: 1px solid #000;
+  margin-bottom: 12px;
+}
+.canvas-box canvas {
+  width: 100%;
+  height: 100%;
+}
+</style>

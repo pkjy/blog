@@ -4645,9 +4645,9 @@ q@^1.1.2:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
 
-qrcode-pure@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/qrcode-pure/-/qrcode-pure-0.0.1.tgz#682bd8c3c6b78377e5087da52f384878863f8ec9"
+qrcode-pure@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/qrcode-pure/-/qrcode-pure-0.0.2.tgz#7f80bc723b49d9a89f975396810ed2e749e61f5d"
 
 qrcode.vue@^1.6.0:
   version "1.6.0"
