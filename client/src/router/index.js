@@ -18,6 +18,8 @@ const MainGalleryCsv = () =>
   import("@/components/MainGalleryCsv.vue")
 const MainGalleryQrcodePure = () =>
   import("@/components/MainGalleryQrcodePure.vue")
+const MainGalleryMiniprogram = () =>
+  import("@/components/MainGalleryMiniprogram.vue")
 
 Vue.use(Router);
 Vue.use(Meta);
@@ -77,6 +79,11 @@ const router = new Router({
     path: '/gallery/qrcode-pure',
     name: 'MainGalleryQrcodePure',
     component: MainGalleryQrcodePure,
+  },
+  {
+    path: '/gallery/wx-mini-program',
+    name: 'MainGalleryMiniprogram',
+    component: MainGalleryMiniprogram,
   }
   ],
   scrollBehavior(to) {
