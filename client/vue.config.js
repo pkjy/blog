@@ -1,6 +1,5 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
   // Project deployment base
   // By default we assume your app will be deployed at the root of a domain,
@@ -18,10 +17,6 @@ module.exports = {
   // valid values: true | false | 'error'
   // when set to 'error', lint errors will cause compilation to fail.
   // lintOnSave: true,
-
-  // use the full build with in-browser compiler?
-  // https://vuejs.org/v2/guide/installation.html#Runtime-Compiler-vs-Runtime-only
-  compiler: false,
 
   // tweak internal webpack configuration.
   // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
@@ -89,12 +84,6 @@ module.exports = {
     loaderOptions: {}
   },
 
-
-  // split vendors using autoDLLPlugin?
-  // can also be an explicit Array of dependencies to include in the DLL chunk.
-  // See https://github.com/vuejs/vue-cli/blob/dev/docs/cli-service.md#dll-mode
-  dll: false,
-
   // options for the PWA plugin.
   // see https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
   pwa: {},
@@ -107,7 +96,7 @@ module.exports = {
     hotOnly: false,
     // See https://github.com/vuejs/vue-cli/blob/dev/docs/cli-service.md#configuring-proxy
     proxy: null, // string | Object
-    before: app => {}
+    before: app => { }
   },
   configureWebpack: {
     plugins: [
