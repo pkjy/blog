@@ -15,34 +15,22 @@
       </div>
     </div>
 
-    <div class="container header">
-      <router-link to="/" class="logo-link">
-        <img id="logo" :src="logoLogo" alt="logo">
-      </router-link>
-      <ul class="nav nav-list">
-        <li class="nav-list-item" v-for="(value, key) in themeConfig.menu" :key="key">
-          <router-link :to="value" class="nav-list-link">{{ key.toUpperCase() }}</router-link>
-        </li>
-      </ul>
-    </div>
+    <NavBarMenu></NavBarMenu>
   </div>
 
 </template>
 
 <script>
+import NavBarMenu from '@/components/common/NavBarMenu'
+
 export default {
-  name: "NavBar",
-  computed: {
-    themeConfig() {
-      return this.$store.state.themeConfig;
-    }
-  },
+  name: 'NavBar',
+  components: { NavBarMenu },
+  computed: {},
   data() {
-    return {
-      logoLogo: require("@/assets/img/pjy.png")
-    };
+    return {}
   }
-};
+}
 </script>
 
 <style>
@@ -65,7 +53,7 @@ ul.nav {
 .row:after,
 .modal-footer:before,
 .modal-footer:after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 
@@ -99,14 +87,14 @@ ul.nav {
 }
 .wpb_row .row-bg-wrap:after,
 .wpb_row
-  .row-bg[data-enable_gradient="true"][data-overlay_strength="image_trans"]:before {
+  .row-bg[data-enable_gradient='true'][data-overlay_strength='image_trans']:before {
   display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  content: " ";
+  content: ' ';
   z-index: 2;
 }
 
@@ -124,7 +112,7 @@ ul.nav {
 }
 
 .using-image {
-  background: url("http://7xttt4.com1.z0.glb.clouddn.com/cool-wallpaper-3-min.jpg"),
+  background: url('http://7xttt4.com1.z0.glb.clouddn.com/cool-wallpaper-3-min.jpg'),
     linear-gradient(233deg, #e56420, #c22525, #3d9c31, #37bbde);
   width: 100%;
   background-size: cover;

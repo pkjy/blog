@@ -8,6 +8,8 @@ const MainArchives = () =>
   import("@/components/MainArchives.vue")
 const MainHome = () =>
   import("@/components/MainHome.vue")
+const MainPoster = () =>
+  import("@/components/MainPoster.vue")
 const MainGallery = () =>
   import("@/components/MainGallery.vue")
 const MainGalleryDirective = () =>
@@ -49,6 +51,11 @@ const router = new Router({
         next();
       }
     },
+  },
+  {
+    path: '/poster/',
+    name: 'MainPoster',
+    component: MainPoster,
   },
   {
     path: '/archives/',

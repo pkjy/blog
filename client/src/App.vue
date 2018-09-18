@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="wrap">
-      <app-nav />
+      <app-nav v-if="!hideHead" />
       <div v-if="this.$store.state.loadingContent" class="loading-warp-content">
         <div class="sk-wave loading-grid-content">
           <div class="sk-rect sk-rect1 loading-element-content"></div>
@@ -14,7 +14,7 @@
       <transition name="slide-fade">
         <router-view v-if="!this.$store.state.loadingContent" class="container" />
       </transition>
-      <footer>
+      <footer v-if="!hideHead">
         <paginator />
         <copyright />
       </footer>
@@ -23,22 +23,22 @@
 </template>
 
 <script>
-import "normalize.css";
-import "@/assets/css/theme/index.css";
-import "@/assets/css/common.css";
-import "@/assets/css/base.css";
-import "@/assets/css/header.css";
-import "@/assets/css/custom.css";
-import "@/assets/css/md.css";
+import 'normalize.css'
+import '@/assets/css/theme/index.css'
+import '@/assets/css/common.css'
+import '@/assets/css/base.css'
+import '@/assets/css/header.css'
+import '@/assets/css/custom.css'
+import '@/assets/css/md.css'
 
-import appNav from "@/components/common/NavBar";
-import copyright from "@/components/common/FooterCopyright";
-import paginator from "@/components/common/PagePaginator";
+import appNav from '@/components/common/NavBar'
+import copyright from '@/components/common/FooterCopyright'
+import paginator from '@/components/common/PagePaginator'
 
-import "../node_modules/spinkit/css/spinkit.css";
+import '../node_modules/spinkit/css/spinkit.css'
 
 export default {
-  name: "App",
+  name: 'App',
   components: {
     appNav,
     copyright,
@@ -46,18 +46,21 @@ export default {
   },
   computed: {
     logoPath() {
-      let path = this.$store.state.themeConfig.logo;
+      let path = this.$store.state.themeConfig.logo
       if (/^(https?:\/\/|\/)/.test(path)) {
-        return path;
+        return path
       }
-      path = this.$store.state.root + path;
-      return path;
+      path = this.$store.state.root + path
+      return path
+    },
+    hideHead() {
+      return this.$route.name === 'MainPoster'
     }
   },
   data() {
-    return {};
+    return {}
   }
-};
+}
 </script>
 
 <style>

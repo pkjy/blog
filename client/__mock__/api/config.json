@@ -83,6 +83,7 @@
   "themeConfig": {
     "menu": {
       "Home": "/",
+      "Poster": "/poster/",
       "Blog": "/blog/",
       "Archive": "/archives/",
       "Gallery": "/gallery/"

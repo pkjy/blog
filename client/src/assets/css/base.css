@@ -86,7 +86,7 @@ legend {
 html {
     overflow-x: hidden;
     overflow-y: scroll;
-    max-width: 100%
+    max-width: 100%;
 }
 
 html,
@@ -101,7 +101,7 @@ body {
     font-size: 15px;
     line-height: 1.6;
     background-color: #fff;
-    font-family: 'sourcesanspro', 'Helvetica Neue', Arial, sans-serif;
+    font-family: "Segoe UI",Segoe,Tahoma, Arial,Verdana, sans-serif;
 }
 
 ol,

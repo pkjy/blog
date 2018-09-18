@@ -19,7 +19,7 @@
         <tr>
           <td>2017.02-</td>
           <td>
-            <a target="_blank" href="http://spiritframe.com">湖南心镜科技有限公司</a>前端<br> 负责多个项目的前端开发（PC端、Mobile端、APP混合开发）
+            <a target="_blank" href="http://spiritframe.com">湖南心镜科技有限公司</a>前端主程<br>
           </td>
         </tr>
         <tr>
