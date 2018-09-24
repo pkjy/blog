@@ -19,20 +19,24 @@
         <tr>
           <td>2017.02-</td>
           <td>
-            <a target="_blank" href="http://spiritframe.com">湖南心镜科技有限公司</a>前端主程<br>
+            <a target="_blank"
+               href="http://spiritframe.com">湖南心镜科技有限公司</a>前端主程<br>
           </td>
         </tr>
         <tr>
           <td>2016.03-2017.03</td>
           <td>
-            <a target="_blank" href="https://ife.baidu.com">百度IFE</a>——2016年春季班学习——
-            <a target="_blank" href="https://github.com/pkjy/ife-task">查看仓库</a>
+            <a target="_blank"
+               href="https://ife.baidu.com">百度IFE</a>——2016年春季班学习——
+            <a target="_blank"
+               href="https://github.com/pkjy/ife-task">查看仓库</a>
           </td>
         </tr>
         <tr>
           <td>2015.09</td>
           <td>为政法系制作
-            <a target="_blank" href="https://player.youku.com/player.php/sid/XMTQxODEzNzIwMA==/v.swf">《最美系部》</a>系部宣传片</td>
+            <a target="_blank"
+               href="https://player.youku.com/player.php/sid/XMTQxODEzNzIwMA==/v.swf">《最美系部》</a>系部宣传片</td>
         </tr>
         <tr>
           <td>2014.09-2015.09</td>
@@ -43,7 +47,8 @@
                 <router-link to="/home">宣传单</router-link>
               </li>
               <li>拍摄并后期了
-                <a target="_blank" href="https://player.youku.com/player.php/Type/Folder/Fid/23402758/Ob/1/sid/XNzgzNTU0MjYw/v.swf">迎新趣味短视频</a>
+                <a target="_blank"
+                   href="https://player.youku.com/player.php/Type/Folder/Fid/23402758/Ob/1/sid/XNzgzNTU0MjYw/v.swf">迎新趣味短视频</a>
               </li>
             </ul>
           </td>
@@ -57,13 +62,16 @@
           <td>政法系学生分会新闻部干事
             <ul>
               <li>会声会影制作过
-                <a target="_blank" href="https://player.youku.com/player.php/Type/Folder/Fid/23402758/Ob/1/sid/XNjIyOTExMTI0/v.swf">电子相册</a>
+                <a target="_blank"
+                   href="https://player.youku.com/player.php/Type/Folder/Fid/23402758/Ob/1/sid/XNjIyOTExMTI0/v.swf">电子相册</a>
               </li>
               <li>拍摄和后期了系部
-                <a target="_blank" href="https://player.youku.com/player.php/Type/Folder/Fid/23402758/Ob/1/sid/XNzgzNDU2OTIw/v.swf">微视频（定格动画）</a>
+                <a target="_blank"
+                   href="https://player.youku.com/player.php/Type/Folder/Fid/23402758/Ob/1/sid/XNzgzNDU2OTIw/v.swf">微视频（定格动画）</a>
               </li>
               <li>用AE模板做了个
-                <a target="_blank" href="https://player.youku.com/player.php/sid/XNjg4NzA1NTYw/v.swf">小片头</a>
+                <a target="_blank"
+                   href="https://player.youku.com/player.php/sid/XNjg4NzA1NTYw/v.swf">小片头</a>
               </li>
             </ul>
           </td>
@@ -84,43 +92,64 @@
     <strong>HTML+CSS静态网页类</strong>
     <ul>
       <li>Demo1，大型企业官网静态页面→
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part1/task07.html" title="task07">查看</a>
+        <a target="_blank"
+           href="https://pkjy.github.io/ife-task/2016_spring/part1/task07.html"
+           title="task07">查看</a>
       </li>
       <li>Demo2，信息查询管理静态页面→
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part1/task09.html" title="task09">查看</a>
+        <a target="_blank"
+           href="https://pkjy.github.io/ife-task/2016_spring/part1/task09.html"
+           title="task09">查看</a>
       </li>
     </ul>
     <strong>Javascript</strong>
     <ul>
       <li>Demo1，算法可视化(简单的冒泡算法)→
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part2/task19/" title="task19">查看</a>
+        <a target="_blank"
+           href="https://pkjy.github.io/ife-task/2016_spring/part2/task19/"
+           title="task19">查看</a>
       </li>
       <li>Demo2，表格控件(支持内容排序、首行冻结)→
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part3/task38/" title="task38">查看</a>
+        <a target="_blank"
+           href="https://pkjy.github.io/ife-task/2016_spring/part3/task38/"
+           title="task38">查看</a>
       </li>
       <li>Demo3，日历控件→
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part3/task40/" title="task40">查看</a>
+        <a target="_blank"
+           href="https://pkjy.github.io/ife-task/2016_spring/part3/task40/"
+           title="task40">查看</a>
       </li>
       <li>Demo4，听指令的小方块→
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part2/task35/" title="task35">查看</a>
+        <a target="_blank"
+           href="https://pkjy.github.io/ife-task/2016_spring/part2/task35/"
+           title="task35">查看</a>
       </li>
       <li>Demo5，图片马赛克化——
-        <a target="_blank" href="https://pkjy.github.io/front-end-skills/src/mosaic-canvas/">查看</a>
+        <a target="_blank"
+           href="https://pkjy.github.io/front-end-skills/src/mosaic-canvas/">查看</a>
       </li>
     </ul>
     <strong>综合类</strong>
     <ul>
       <li>Demo1，jQuery Mobile框架写的计时功能的TODO，WEB版+安卓版——
-        <a target="_blank" href="https://pkjy.github.io/front-end-skills/src/Hours/" title="Web版">查看Web版</a>——
-        <a target="_blank" href="https://pkjy.github.io/front-end-skills/src/Hours/Hours.apk" title="APK下载">下载
+        <a target="_blank"
+           href="https://pkjy.github.io/front-end-skills/src/Hours/"
+           title="Web版">查看Web版</a>——
+        <a target="_blank"
+           href="https://pkjy.github.io/front-end-skills/src/Hours/Hours.apk"
+           title="APK下载">下载
           <i class="fa fa-android fa-2x"></i>
         </a>
       </li>
       <li>Demo2，微型调查问卷平台——
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part4/task50/index.html" title="task50">查看</a>
+        <a target="_blank"
+           href="https://pkjy.github.io/ife-task/2016_spring/part4/task50/index.html"
+           title="task50">查看</a>
       </li>
       <li>Demo3，一个相册库，集成三种布局方式——
-        <a target="_blank" href="https://pkjy.github.io/ife-task/2016_spring/part4/task51/index.html" title="task51">查看</a>
+        <a target="_blank"
+           href="https://pkjy.github.io/ife-task/2016_spring/part4/task51/index.html"
+           title="task51">查看</a>
       </li>
     </ul>
   </section>

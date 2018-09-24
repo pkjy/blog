@@ -3,9 +3,11 @@
     <example-card>
       <template slot="header">微信小程序</template>
       <template slot="content">
-        <div class="text-left" style="margin-top:16px;">
+        <div class="text-left"
+             style="margin-top:16px;">
           <div>
-            <img :src="miniprogramImage" alt="小程序">
+            <img :src="miniprogramImage"
+                 alt="小程序">
           </div>
         </div>
       </template>

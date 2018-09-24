@@ -20,15 +20,15 @@
 
 <script>
 export default {
-  name: "ExmapleCard",
+  name: 'ExmapleCard',
   components: {},
   data() {
-    return {};
+    return {}
   },
   methods: {},
   created() {},
   mounted() {}
-};
+}
 </script>
 
 <style  scoped>

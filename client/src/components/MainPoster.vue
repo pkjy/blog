@@ -1,5 +1,6 @@
 <template>
-  <section class="poster-wrap" ref="PosterWrap">
+  <section class="poster-wrap"
+           ref="PosterWrap">
     <NavBarMenu></NavBarMenu>
     <section class="poster-mask"></section>
     <section class="poster-conver-story">

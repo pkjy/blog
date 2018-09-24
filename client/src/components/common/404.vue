@@ -2,10 +2,18 @@
   <div style="margin-top: -20px;height:100%;">
     <div class="wscn-http404">
       <div class="pic-404">
-        <img class="pic-404__parent" :src="img_404" alt="404">
-        <img class="pic-404__child left" :src="img_404_cloud" alt="404">
-        <img class="pic-404__child mid" :src="img_404_cloud" alt="404">
-        <img class="pic-404__child right" :src="img_404_cloud" alt="404">
+        <img class="pic-404__parent"
+             :src="img_404"
+             alt="404">
+        <img class="pic-404__child left"
+             :src="img_404_cloud"
+             alt="404">
+        <img class="pic-404__child mid"
+             :src="img_404_cloud"
+             alt="404">
+        <img class="pic-404__child right"
+             :src="img_404_cloud"
+             alt="404">
       </div>
       <div class="content-404">
         <div class="content-404__oops">OOPS!</div>
@@ -15,7 +23,8 @@
         <div class="content-404__headline">{{ message }}</div>
         <div class="content-404__info">请检查您输入的网址是否正确</div>
         <!-- <a href="javascript:;" @click="$router.go(-1)" class="content-404__return-home">返回上一页</a> -->
-        <a href="/" class="content-404__return-home">返回首页</a>
+        <a href="/"
+           class="content-404__return-home">返回首页</a>
       </div>
     </div>
   </div>

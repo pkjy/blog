@@ -1,14 +1,18 @@
 <template>
   <ul class="post-list">
-    <li v-for="post in postlist" :key="post.path" class="post-list-item">
+    <li v-for="post in postlist"
+        :key="post.path"
+        class="post-list-item">
       <article class="post-block">
         <h1 class="post-title">
-          <router-link :to="post.path" class="post-title-link">
+          <router-link :to="post.path"
+                       class="post-title-link">
             {{ post.title }}
           </router-link>
         </h1>
         <div class="post-info">{{ post.date |fns}}</div>
-        <div class="post-content" v-html="md2html(post.excerpt)"></div>
+        <div class="post-content"
+             v-html="md2html(post.excerpt)"></div>
         <router-link :to="post.path">
           <span class="read-more">READ MORE</span>
         </router-link>

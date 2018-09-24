@@ -1,7 +1,12 @@
 <template>
-  <div class="paginator" v-if="view === 'post'">
-    <el-button v-if="prev" @click="$router.push({path:prev})" type="primary">上一篇</el-button>
-    <el-button v-if="next" @click="$router.push({path:next})" type="primary">下一篇</el-button>
+  <div class="paginator"
+       v-if="view === 'post'">
+    <el-button v-if="prev"
+               @click="$router.push({path:prev})"
+               type="primary">上一篇</el-button>
+    <el-button v-if="next"
+               @click="$router.push({path:next})"
+               type="primary">下一篇</el-button>
 
     <!-- <router-link v-if="prev" :to="prev" class="prev">上一篇</router-link>
     <router-link v-if="next" :to="next" class="prev">下一篇</router-link> -->

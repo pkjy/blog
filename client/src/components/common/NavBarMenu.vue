@@ -1,11 +1,17 @@
 <template>
   <div class="container header">
-    <router-link to="/" class="logo-link">
-      <img id="logo" :src="logoLogo" alt="logo">
+    <router-link to="/"
+                 class="logo-link">
+      <img id="logo"
+           :src="logoLogo"
+           alt="logo">
     </router-link>
     <ul class="nav nav-list">
-      <li class="nav-list-item" v-for="(value, key) in themeConfig.menu" :key="key">
-        <router-link :to="value" class="nav-list-link">{{ key.toUpperCase() }}</router-link>
+      <li class="nav-list-item"
+          v-for="(value, key) in themeConfig.menu"
+          :key="key">
+        <router-link :to="value"
+                     class="nav-list-link">{{ key.toUpperCase() }}</router-link>
       </li>
     </ul>
   </div>

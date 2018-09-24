@@ -3,7 +3,8 @@
     <article class="post-block">
       <h1 class="post-title">{{ postTitle }}</h1>
       <div class="post-info">{{ postDate | fns}}</div>
-      <div class="post-content" v-html="postContent"></div>
+      <div class="post-content"
+           v-html="postContent"></div>
     </article>
   </div>
 </template>

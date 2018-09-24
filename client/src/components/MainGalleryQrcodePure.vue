@@ -3,11 +3,16 @@
     <example-card>
       <template slot="header">二维码解码</template>
       <template slot="content">
-        <input type="file" multiple @change="handleChange">
-        <div class="text-left" style="margin-top:16px;">
+        <input type="file"
+               multiple
+               @change="handleChange">
+        <div class="text-left"
+             style="margin-top:16px;">
           <div>
             二维码值为：
-            <span style="text-decoration:underline;margin-right:5px;" v-for="(item,idx) in result" :key="idx">{{item.text}} </span>
+            <span style="text-decoration:underline;margin-right:5px;"
+                  v-for="(item,idx) in result"
+                  :key="idx">{{item.text}} </span>
           </div>
         </div>
       </template>
@@ -20,10 +25,17 @@
     <example-card>
       <template slot="header">二维码编码</template>
       <template slot="content">
-        <input placeholder="请输入二维码值" type="text" v-model="qrvalue">
-        <el-button @click="encode" type="primary" size="mini" class="m-l_2">编码</el-button>
-        <div class="text-left" style="margin-top:16px;">
-          <div class="canvas-box" ref="canvasBox">
+        <input placeholder="请输入二维码值"
+               type="text"
+               v-model="qrvalue">
+        <el-button @click="encode"
+                   type="primary"
+                   size="mini"
+                   class="m-l_2">编码</el-button>
+        <div class="text-left"
+             style="margin-top:16px;">
+          <div class="canvas-box"
+               ref="canvasBox">
           </div>
         </div>
       </template>
