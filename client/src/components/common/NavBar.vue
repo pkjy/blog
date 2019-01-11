@@ -35,7 +35,7 @@ export default {
   name: 'NavBar',
   components: { NavBarMenu },
   computed: {},
-  data() {
+  data () {
     return {}
   }
 }
@@ -120,7 +120,7 @@ ul.nav {
 }
 
 .using-image {
-  background: url('http://7xttt4.com1.z0.glb.clouddn.com/cool-wallpaper-3-min.jpg'),
+  background: url('https://image.dns.pkjy.xyz/cool-wallpaper-3-min.jpg'),
     linear-gradient(233deg, #e56420, #c22525, #3d9c31, #37bbde);
   width: 100%;
   background-size: cover;
