@@ -1,4 +1,6 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const webpack = require('webpack')
+console.log('process.env.fundebug', process.env.fundebug)
 const path = require('path')
 module.exports = {
   // Project deployment base
@@ -105,6 +107,9 @@ module.exports = {
         to: '.',
         ignore: ['.*']
       }]),
+      new webpack.DefinePlugin({
+        FUNDEBUG_APIEKY: JSON.stringify(process.env.fundebug)
+      }),
       // // copy theme assets
       // new CopyWebpackPlugin([
       //   {

@@ -32,7 +32,7 @@ Vue.use(canvasDownload)
 
 import * as fundebug from "fundebug-javascript"
 import fundebugVue from "fundebug-vue"
-fundebug.apikey = process.env.fundebug
+fundebug.apikey = FUNDEBUG_APIEKY
 fundebugVue(fundebug, Vue);
 
 /* eslint-disable no-new */
