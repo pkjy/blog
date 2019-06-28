@@ -26,20 +26,20 @@
           <el-form-item prop="phone"
                         label="手机号码">
             <el-input placeholder="输入手机号码"
-                      prefix-icon="el-icon-my-mobilephone"
+                      prefix-icon="pkjy-shouji"
                       v-model="loginValidateForm.phone"></el-input>
           </el-form-item>
           <el-form-item prop="pass"
                         label="非空密码">
             <el-input type="password"
                       placeholder="登录密码"
-                      prefix-icon="el-icon-my-unlock"
+                      prefix-icon="pkjy-unlock"
                       v-model="loginValidateForm.pass"
                       @keyup.enter.native="submitLogForm('loginValidateForm')"></el-input>
           </el-form-item>
           <el-form-item prop="IDCard"
                         label="身份证">
-            <el-input prefix-icon="el-icon-my-unlock"
+            <el-input prefix-icon="pkjy-businesscard"
                       v-model="loginValidateForm.IDCard"
                       @keyup.enter.native="submitLogForm('loginValidateForm')"></el-input>
           </el-form-item>
@@ -171,8 +171,8 @@ export default {
       ;[...this.search] = [arr[0].toString(), arr[1].toString()]
     }
   },
-  created() {},
-  mounted() {}
+  created() { },
+  mounted() { }
 }
 </script>
 

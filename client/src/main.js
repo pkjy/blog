@@ -30,6 +30,11 @@ Vue.use(wave)
 import canvasDownload from "@/directives/download/index"
 Vue.use(canvasDownload)
 
+import * as fundebug from "fundebug-javascript"
+import fundebugVue from "fundebug-vue"
+fundebug.apikey = process.env.fundebug
+fundebugVue(fundebug, Vue);
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

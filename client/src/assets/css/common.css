@@ -1,5 +1,11 @@
 /*-------------------------------------------------------------------------*/
-
+[class*=" pkjy-"], [class^=pkjy-]{
+  font-family: "i-pkjy" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 /*	2. ohter
 /*-------------------------------------------------------------------------*/
 
