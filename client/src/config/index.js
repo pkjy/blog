@@ -8,5 +8,5 @@ export const pattMobileMosaic = new RegExp(/(\d{3})\d*(\d{4})/)
 export const pattNotes = new RegExp(/^([a-z0-9]{6})?$/)
 export const pattFloat = new RegExp(/^[1-9]\d*\.\d*|0\.\d*[1-9]\d*$/) // 正浮点数
 
-export const PROXY_BASE_URL = 'https://www.pkjy.xyz/bing'
+export const PROXY_BASE_URL = '//pkjy.xyz/bing'
 export const BING_BASE_URL = 'https://cn.bing.com'
