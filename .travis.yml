@@ -12,7 +12,6 @@ branches:
   - master
 
 install:
-  - cd ./client
   - yarn
   - fundebug=$FUNDEBUG_APIKEY yarn build
 
@@ -33,6 +32,6 @@ deploy:
   target-branch: master
   # 是否保存提交记录
   # keep-history: true
-  local-dir: client/dist
+  local-dir: dist
   on:
     branch: master
