@@ -15,7 +15,7 @@
     "element-ui": "^2.10.0",
     "fundebug-javascript": "^1.8.2",
     "fundebug-vue": "0.0.1",
-    "marked": "^0.6.2",
+    "marked": "^0.7.0",
     "normalize.css": "^8.0.1",
     "qrcode-pure": "^0.0.5",
     "qrcode.vue": "^1.6.2",
