@@ -12,8 +12,8 @@ branches:
   - master
 
 install:
-  - yarn
-  - fundebug=$FUNDEBUG_APIKEY yarn build
+  - npm
+  - fundebug=$FUNDEBUG_APIKEY npm run build
 
 script:
   # script默认是npm test，如果有yarn.lock文件则会用yarn test
