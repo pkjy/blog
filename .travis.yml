@@ -12,7 +12,7 @@ branches:
   - master
 
 install:
-  - npm
+  - npm i
   - fundebug=$FUNDEBUG_APIKEY npm run build
 
 script:
