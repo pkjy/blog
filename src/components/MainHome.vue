@@ -2,25 +2,72 @@
   <section class="main-content">
     <h2>Self-introduction</h2>
     <p>
-      <strong>基本信息：</strong>彭君怡，男，17年毕业，
+      <strong>基本信息：</strong>彭君怡，男，籍贯怀化，长沙工作。
     </p>
     <p>
-      <strong>主技能：</strong>HTML\JS\CSS\Vue全家桶</p>
-    <p>
-      <strong>副技能：</strong>PS\AE\会声会影等使用</p>
+      <strong>技术栈：</strong>前端：HTML\JS\CSS\Vue\Cordova 后端：Nodejs\eggjs 服务器：ubuntu\debian\windows
+    </p>
+    <p>{{experienceInfo.fe}} 年前端开发经验; {{experienceInfo.be}} 年后端经验(nodejs); {{experienceInfo.crawler}} 年爬虫开发经验</p>
 
-    <h2>Experience</h2>
+    <h2>项目经验</h2>
+    <div>开发过的项目数量太多，只挑几个不同类型的展示。(ps:大致按时间先后顺序)</div>
     <table>
       <tbody>
         <tr>
-          <th>Period</th>
-          <th>Experience</th>
+          <th>名称</th>
+          <th>概述</th>
         </tr>
         <tr>
-          <td>2017.02-</td>
+          <td>“征信”类查询SaaS平台</td>
+          <td>一个帮B端客户查询C端“信用”的平台。涵盖了B端后台，管理员后台，C端Mobile端以及C端App。前期独自负责PC后台的内容，后期重构了Mobile端框架以及代码逻辑。APP采用Hybrid APP方案，使用JSBridge与native通讯，独自负责H5部分的实现。</td>
+        </tr>
+        <tr>
+          <td>前端基础功能建设</td>
+          <td>实现在命令行快速创建具备登录、注册、权限登基础功能的新项目。</td>
+        </tr>
+        <tr>
+          <td>表单项目</td>
+          <td>一个表单的功能，后台可以创建表单，支持各种类型的填写（文本、文本域、经纬度、表格、手机号等等）。后端提供基础的CRUD功能，独自负责整个表单前端数据结构的定义，后台与用户Mobile端界面的搭建。</td>
+        </tr>
+        <tr>
+          <td>智能呼叫机器人</td>
+          <td>对话术进行录入，进行智能语音电销。前期负责整个项目的进度跟进与安排，负责所有前端部分的功能开发。（后台主要难点为在线流程图的实现，移动端录音的实现等）。中期了解了sip的流程以及运营商模拟线路、中继线路、IMS线路、手机卡GOIP等通信行业的一些安装、开发流程。</td>
+        </tr>
+        <tr>
+          <td>积分商城</td>
+          <td>使用eggjs完成商城后端部分的开发，并对前端项目进行性能优化。优化前端首屏加载、兼容性等，优化过后均超过竞品。也碰到过过CC攻击、SQL注入等情况。</td>
+        </tr>
+        <tr>
+          <td>爬虫项目</td>
+          <td>交付完成若干个需要使用浏览器爬取的项目，逆向并分析风控代码。</td>
+        </tr>
+        <tr>
+          <td>视频播放APP</td>
+          <td>空闲时候开发的项目，主要用于熟悉vue3的语法+cordova打包APP。用cordova打包成APP。后端目前用eggjs写的，支持注册登录等功能，后续会尝试使用nestjs。</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>经历</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th>时期</th>
+          <th>经历</th>
+        </tr>
+        <tr>
+          <td>2019.02-</td>
           <td>
-            <a target="_blank"
-               href="http://spiritframe.com">湖南心镜科技有限公司</a>前端主程<br>
+            <div>湖南心镜科技有限公司研发部副部长</div><br>
+          </td>
+        </tr>
+        <tr>
+          <td>2017.02-2019.02</td>
+          <td>
+            <div>湖南心镜科技有限公司前端主程</div><br>
+            <ul>
+              <li></li>
+            </ul>
           </td>
         </tr>
         <tr>
@@ -36,7 +83,8 @@
           <td>2015.09</td>
           <td>为政法系制作
             <a target="_blank"
-               href="https://player.youku.com/player.php/sid/XMTQxODEzNzIwMA==/v.swf">《最美系部》</a>系部宣传片</td>
+               href="https://player.youku.com/player.php/sid/XMTQxODEzNzIwMA==/v.swf">《最美系部》</a>系部宣传片
+          </td>
         </tr>
         <tr>
           <td>2014.09-2015.09</td>
@@ -163,14 +211,19 @@ export default {
   computed: {},
   data() {
     return {
-      interval: null
+      interval: null,
+      experienceInfo: {
+        fe: new Date().getFullYear() - 2017,
+        be: new Date().getFullYear() - 2020,
+        crawler: new Date().getFullYear() - 2019
+      }
     }
   },
   methods: {
     throttle(method, context) {
       //用函数节流优化rezise——《高程》
       clearTimeout(method.tId)
-      method.tId = setTimeout(function() {
+      method.tId = setTimeout(function () {
         method.call(context)
       }, 100)
     },
@@ -201,14 +254,14 @@ export default {
         this.grow = 3
         this.tremble = Math.random() - 0.5
         this.range = (Math.random() - 0.5) * 5
-        this.drawCircle = function() {
+        this.drawCircle = function () {
           ctx.beginPath()
           ctx.fillStyle = this.color
           ctx.arc(this.x, this.y, r, 0, Math.PI * 2)
           ctx.fill()
           ctx.closePath()
         }
-        this.pos = function() {
+        this.pos = function () {
           var value = this.grow * this.tremble
           this.x = this.x + this.range
           this.y += value
@@ -266,6 +319,11 @@ export default {
 .main-content table thead th {
   padding: 5px;
   min-width: 20px;
+}
+
+.main-content table tr th:first-child,
+.main-content table tr td:first-child {
+  width: 190px;
 }
 
 .main-content table tbody tr:nth-child(2n) {

@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^0.21.1",
     "date-fns": "^1.30.1",
-    "element-ui": "^2.10.0",
+    "element-ui": "^2.15.2",
     "fundebug-javascript": "^1.8.2",
     "fundebug-vue": "0.0.1",
     "marked": "^0.7.0",
@@ -20,7 +20,7 @@
     "qrcode-pure": "^0.0.5",
     "qrcode.vue": "^1.6.2",
     "spinkit": "^1.2.5",
-    "vue": "^2.6.10",
+    "vue": "^2.6.14",
     "vue-meta": "^2.0.4",
     "vue-router": "^3.0.6",
     "vuex": "^3.1.1"
@@ -31,7 +31,7 @@
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-url": "^8.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "vue-template-compiler": "^2.6.14"
   },
   "babel": {
     "presets": [

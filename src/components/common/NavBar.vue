@@ -120,7 +120,7 @@ ul.nav {
 }
 
 .using-image {
-  background: url('https://image.dns.pkjy.xyz/cool-wallpaper-3-min.jpg'),
+  background: url('../../assets/img/cool-wallpaper-3-min.jpg'),
     linear-gradient(233deg, #e56420, #c22525, #3d9c31, #37bbde);
   width: 100%;
   background-size: cover;
