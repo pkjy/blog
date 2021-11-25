@@ -1,115 +1,103 @@
-const CopyWebpackPlugin = require('copy-webpack-plugin')
-const webpack = require('webpack')
-console.log('process.env.fundebug', process.env.fundebug)
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path')
+const resolve = dir => path.join(__dirname, dir)
+// If your port is set to 80,
+// use administrator privileges to execute the command line.
+// For example, on Mac: sudo npm run / sudo yarn
+const devServerPort = 8888 // TODO: get this variable from setting.ts
+const mockServerPort = 9528 // TODO: get this variable from setting.ts
+const name = 'kai' // TODO: get this variable from setting.ts
+const CopyWebpackPlugin = require('copy-webpack-plugin')
+
 module.exports = {
-  // Project deployment base
-  // By default we assume your app will be deployed at the root of a domain,
-  // e.g. https://www.my-app.com/
-  // If your app is deployed at a sub-path, you will need to specify that
-  // sub-path here. For example, if your app is deployed at
-  // https://www.foobar.com/my-app/
-  // then change this to '/my-app/'
-  publicPath: '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/' : '/',
+  lintOnSave: process.env.NODE_ENV === 'development',
+  productionSourceMap: false,
+  devServer: {
+    port: devServerPort,
+    open: true,
+    overlay: {
+      warnings: false,
+      errors: true
+    },
+    progress: false,
+    proxy: {
+      // change xxx-api/login => /mock-api/v1/login 
+      // detail: https://cli.vuejs.org/config/#devserver-proxy
+      [process.env.VUE_APP_BASE_API]: {
+        target: `http://localhost:${mockServerPort}/mock-api/v1`,
+        changeOrigin: true, // needed for virtual hosted sites
+        ws: true, // proxy websockets
+        pathRewrite: {
+          ['^' + process.env.VUE_APP_BASE_API]: ''
+        }
+      }
+    }
+  },
+  pluginOptions: {
+    'style-resources-loader': {
+      preProcessor: 'scss',
+      patterns: [
+        path.resolve(__dirname, 'src/assets/styles/_variables.scss'),
+      ]
+    }
+  },
+  chainWebpack(config) {
+    // provide the app's title in webpack's name field, so that
+    // it can be accessed in index.html to inject the correct title.
+    config.set('name', name)
 
-  // where to output built files
-  outputDir: 'dist',
+    config.resolve.alias
+      .set('@', resolve('src'))
 
-  // whether to use eslint-loader for lint on save.
-  // valid values: true | false | 'error'
-  // when set to 'error', lint errors will cause compilation to fail.
-  // lintOnSave: true,
-
-  // tweak internal webpack configuration.
-  // see https://github.com/vuejs/vue-cli/blob/dev/docs/webpack.md
-  chainWebpack: config => {
-    // config.output
-    //   .filename('./layout/body.ejs');
-
-
-    // const inlineLimit = 10000;
-    // const assetsPath = './source';
+    // https://webpack.js.org/configuration/devtool/#development
     // config
-    //   .output
-    //   .filename(path.join(assetsPath, 'js/[name].[hash:8].js'))
-    //   .chunkFilename(path.join(assetsPath, 'js/[id].[hash:8].js'))
+    //   .when(process.env.NODE_ENV === 'development',
+    //     config => config.devtool('cheap-eval-source-map')
+    //   )
 
-    // config.plugin('extract-css')
-    //   .use(ExtractTextPlugin, [{
-    //     filename: path.join(assetsPath, 'css/[name].[contenthash:8].css'),
-    //     allChunks: true
+    // remove vue-cli-service's progress output
+    // config.plugins.delete('progress')
+    // // replace with another progress output plugin to solve the this bug:
+    // // https://github.com/vuejs/vue-cli/issues/4557
+    // config.plugin('simple-progress-webpack-plugin')
+    //   .use(require.resolve('simple-progress-webpack-plugin'), [{
+    //     format: 'compact'
     //   }])
 
-    // config.module
-    //   .rule('images')
-    //   .test(/\.(png|jpe?g|gif)(\?.*)?$/)
-    //   .use('url-loader')
-    //   .loader('url-loader')
-    //   .options({
-    //     limit: inlineLimit,
-    //     name: path.join(assetsPath, 'img/[name].[hash:8].[ext]')
-    //   })
-
-    // config.module
-    //   .rule('fonts')
-    //   .test(/\.(woff2?|eot|ttf|otf)(\?.*)?$/i)
-    //   .use('url-loader')
-    //   .loader('url-loader')
-    //   .options({
-    //     limit: inlineLimit,
-    //     name: path.join(assetsPath, 'fonts/[name].[hash:8].[ext]')
-    //   })
-
-    // config.plugin('html').tap(args => {
-    //   return [{ filename: './layout/body.ejs' }]
-    // })
-  },
-
-  // generate sourceMap for production build?
-  productionSourceMap: true,
-
-  // CSS related options
-  css: {
-    // extract CSS in components into a single CSS file (only in production)
-    // can also be an object of options to pass to extract-text-webpack-plugin
-    extract: true,
-
-    // Enable CSS modules for all css / pre-processor files.
-    // This option does not affect *.vue files.
-    modules: false,
-
-    // enable CSS source maps?
-    sourceMap: false,
-
-    // pass custom options to pre-processor loaders. e.g. to pass options to
-    // sass-loader, use { sass: { ... } }
-    loaderOptions: {}
-  },
-
-  // options for the PWA plugin.
-  // see https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-pwa
-  pwa: {},
-
-  // configure webpack-dev-server behavior
-  devServer: {
-    host: '0.0.0.0',
-    port: 8888,
-    https: false,
-    hotOnly: false,
-    // See https://github.com/vuejs/vue-cli/blob/dev/docs/cli-service.md#configuring-proxy
-    proxy: null, // string | Object
-    before: app => { }
+    config
+      .when(process.env.NODE_ENV !== 'development',
+        config => {
+          config
+            .optimization.splitChunks({
+              chunks: 'all',
+              cacheGroups: {
+                libs: {
+                  name: 'chunk-libs',
+                  test: /[\\/]node_modules[\\/]/,
+                  priority: 10,
+                  chunks: 'initial' // only package third parties that are initially dependent
+                },
+                elementUI: {
+                  name: 'chunk-elementUI', // split elementUI into a single package
+                  priority: 20, // the weight needs to be larger than libs and app or it will be packaged into libs or app
+                  test: /[\\/]node_modules[\\/]_?element-ui(.*)/ // in order to adapt to cnpm
+                },
+                commons: {
+                  name: 'chunk-commons',
+                  test: path.resolve(__dirname, 'src/components'),
+                  minChunks: 3, //  minimum common number
+                  priority: 5,
+                  reuseExistingChunk: true
+                }
+              }
+            })
+          config.optimization.runtimeChunk('single')
+        }
+      )
   },
   configureWebpack: {
     plugins: [
-      new CopyWebpackPlugin([{
-        from: path.resolve(__dirname, './__mock__'),
-        to: '.',
-        ignore: ['.*']
-      }]),
-      new webpack.DefinePlugin({
-        FUNDEBUG_APIEKY: JSON.stringify(process.env.fundebug)
-      }),
       // // copy theme assets
       // new CopyWebpackPlugin([
       //   {
@@ -119,11 +107,5 @@ module.exports = {
       //   }
       // ]),
     ]
-  },
-  // options for 3rd party plugins
-  pluginOptions: {
-    // copy mocked api
-
-    // ...
   }
 }

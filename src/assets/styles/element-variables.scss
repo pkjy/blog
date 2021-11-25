@@ -1,0 +1,10 @@
+/* Element Variables */
+
+// Override Element UI variables
+$--color-primary: #1890ff;
+
+// The :export directive is the magic sauce for webpack
+// https://mattferderer.com/use-sass-variables-in-typescript-and-javascript
+:export {
+  theme: $--color-primary;
+}

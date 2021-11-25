@@ -1,0 +1,44 @@
+/*-------------------------------------------------------------------------*/
+[class^="pkjy-"],
+[class*=" pkjy-"] {
+  font-family            : "iconfont" !important;
+  /* 以下内容参照第三方图标库本身的规则 */
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style             : normal;
+  font-weight            : 400;
+  font-variant           : normal;
+  text-transform         : none;
+  line-height            : 1;
+  vertical-align         : middle;
+  display                : inline-block;
+  font-size              : 18px;
+  line-height            : 1;
+}
+
+[class^=el-icon-], [class*=" el-icon-"]{
+  font-size:14px;
+}
+/*	2. ohter
+/*-------------------------------------------------------------------------*/
+
+.container {
+  margin: 0 auto;
+  width: 900px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #ebebeb;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #ebebeb;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: #b2b2b2;
+}
