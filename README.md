@@ -1,4 +1,4 @@
-# kai-admin
+# blog
 
 ## Project setup
 ```
