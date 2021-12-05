@@ -3,7 +3,7 @@
            class="poster-wrap">
     <NavBarMenu />
     <section class="poster-mask" />
-    <section class="poster-conver-story">
+    <section class="poster-cover-story">
       <section class="content">
         <div>
           <h3 class="inline-block">{{ todayConverstoryResponse.title }}</h3>
@@ -47,7 +47,7 @@ export default defineComponent({
     onMounted(async () => {
       const res = await axios.get('https://pkjy.xyz/bing/HPImageArchive.aspx?format=js&idx=0&n=1')
       todayImageResponse.value = res.data;
-      if (PosterWrap.value) PosterWrap.value.style.background = `url(${BING_BASE_URL}${todayImageResponse.value.images[0].url})`
+      if (PosterWrap.value) PosterWrap.value.style.backgroundImage = `url(${BING_BASE_URL}${todayImageResponse.value.images[0].url})`
       getConverstory()
     })
 
@@ -81,7 +81,7 @@ export default defineComponent({
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-.poster-conver-story {
+.poster-cover-story {
   position: fixed;
   top: 0;
   left: 0;
@@ -90,7 +90,7 @@ export default defineComponent({
   align-items: center;
   display: flex;
 }
-.poster-conver-story .content {
+.poster-cover-story .content {
   max-width: 900px;
   margin: 0 auto;
   display: flex;
@@ -100,7 +100,7 @@ export default defineComponent({
   color: #fff;
 }
 
-.poster-conver-story .footer {
+.poster-cover-story .footer {
   position: absolute;
   bottom: 0;
   right: 0;
