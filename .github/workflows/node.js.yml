@@ -13,6 +13,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
 
     steps: # 构建任务的步骤，一个任务可分为多个步骤
     
