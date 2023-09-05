@@ -44,7 +44,7 @@ jobs:
       with:
         repository-name: pkjy/pkjy.github.io
         # 供用户访问的github access_token 下面的变量是在准备阶段自定义的变量
-        access_token: ${{ secrets.access_token }} 
+        access_token: ${{ secrets.ACCESS_TOKEN }} 
         # 发布到指定分支
         branch: master
         # 指定发布的打包后的文件
