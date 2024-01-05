@@ -40,12 +40,12 @@ export default defineComponent({
 
 
     const getConverstory = async () => {
-      const res = await axios.get(`//demoapi.pkjy.xyz/bing/cnhp/coverstory?d=${currentImage.enddate}`)
+      const res = await axios.get(`http://demoapi.pkjy.xyz/bing/cnhp/coverstory?d=${currentImage.enddate}`)
       todayConverstoryResponse.value = res.data
     }
 
     onMounted(async () => {
-      const res = await axios.get('//demoapi.pkjy.xyz/bing/HPImageArchive.aspx?format=js&idx=0&n=1')
+      const res = await axios.get('http://demoapi.pkjy.xyz/bing/HPImageArchive.aspx?format=js&idx=0&n=1')
       todayImageResponse.value = res.data;
       if (PosterWrap.value) PosterWrap.value.style.backgroundImage = `url(${BING_BASE_URL}${todayImageResponse.value.images[0].url})`
       getConverstory()

@@ -20,5 +20,5 @@ export const pattEnName = new RegExp(/^.{4,30}$/)
 export const pattUserName = new RegExp(/^([\u4e00-\u9fa5]|\w){2,30}$/)
 export const pattMobileForParrot = new RegExp(/(1\d{10})|10010|10086/ig)
 
-export const PROXY_BASE_URL = 'https://demoapi.pkjy.xyz/bing'
+export const PROXY_BASE_URL = 'http://demoapi.pkjy.xyz/bing'
 export const BING_BASE_URL = 'https://cn.bing.com'
